@@ -40,7 +40,7 @@ public class UserController {
     }
 
     @GetMapping(value="/user/{email}", produces = "application/json")
-    public User getUserByEmail(String email) {
+    public User getUserByEmail(@PathVariable String email) {
         try {
             return userService.getUserByEmailAddress(email);
         } catch (NoSuchObjectException e) {
