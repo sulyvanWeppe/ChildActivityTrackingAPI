@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.rmi.NoSuchObjectException;
+import java.security.InvalidParameterException;
 import java.util.List;
 
 @RestController
@@ -68,8 +69,29 @@ public class ParentController {
     public Parent updateParent(@RequestBody Parent parent) {
         try {
             parentService.updateParent(parent);
+            return parentService.getParentById(parent.getId());
         } catch (NoSuchObjectException e) {
-            //ICIIIIIIIIIIIIIIIIIIIIIIII
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
+        } catch (InvalidParameterException e) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
         }
+    }
+
+    @PostMapping(value = "/parent", produces = "application/json")
+    public Parent createParent(@RequestBody Parent parent) {
+        Parent newParent = null;
+        try {
+            newParent = parentService.createParent(parent.getUserId(), parent.getFirstName(), parent.getLastName(), parent.getEmailAddress());
+        } catch (InvalidParameterException e) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
+        } catch(Exception e) {
+            //Check if parent was created in the DB
+            //if yes then delete it
+            if (newParent != null) {
+                parentService.deleteParentById(newParent.getId());
+            }
+        }
+
+        return newParent;
     }
 }
