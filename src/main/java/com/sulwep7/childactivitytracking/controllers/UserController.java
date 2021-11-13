@@ -54,11 +54,11 @@ public class UserController {
     }
 
     @PostMapping(value = "/user", produces="application/json")
-    public ResponseEntity createUser(@RequestBody User user) {
+    public User createUser(@RequestBody User user) {
         User newUser = null;
         try {
             newUser =  userService.createUser(user.getEmailAddress(), user.getLogin(), user.getPassword());
-            return new ResponseEntity(HttpStatus.OK);
+            return newUser;
         } catch (AlreadyUsedUserLogin e) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
         } catch (InvalidParameterException e) {
