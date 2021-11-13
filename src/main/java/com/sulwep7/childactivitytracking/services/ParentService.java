@@ -34,4 +34,6 @@ public interface ParentService {
     public void updateParentLastName(int id, String lastName) throws NoSuchObjectException, InvalidParameterException;
 
     public void updateParentEmail(int id, String email) throws NoSuchObjectException, InvalidParameterException;
+
+    public void updateParent(Parent parent) throws NoSuchObjectException, InvalidParameterException;
 }

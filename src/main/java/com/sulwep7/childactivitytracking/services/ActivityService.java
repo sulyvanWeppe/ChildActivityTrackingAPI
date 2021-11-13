@@ -20,5 +20,5 @@ public interface ActivityService {
 
     public void deleteActivityByName(String name);
 
-    public void updateActivity(int id, String name) throws InvalidParameterException, NoSuchObjectException;
+    public void updateActivity(Activity activity) throws InvalidParameterException, NoSuchObjectException;
 }

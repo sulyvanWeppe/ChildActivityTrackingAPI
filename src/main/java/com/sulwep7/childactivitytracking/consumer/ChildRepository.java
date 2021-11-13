@@ -26,7 +26,6 @@ public interface ChildRepository extends CrudRepository<Child, Integer> {
 
     List<Child> findByAge(int age);
 
-    @Query("select c from Child c where parent_1_id=:parent1Id")
     List<Child> findByParent1Id(int parent1Id);
 
     @Query("select c from Child c where parent_2_id=:parent2Id")
@@ -64,4 +63,9 @@ public interface ChildRepository extends CrudRepository<Child, Integer> {
     @Modifying
     @Query("update Child c set parent_2_id=:parent2Id where id=:id")
     void updateParent2(int id, int parent2Id);
+
+    @Transactional
+    @Modifying
+    @Query("update Child c set first_name=:firstName, last_name=:lastName, parent_1_id=:parent1Id, parent_2_id=:parent2Id, age=:age where id=:id")
+    void updateChild(int id, String firstName, String lastName, int parent1Id, int parent2Id, int age);
 }

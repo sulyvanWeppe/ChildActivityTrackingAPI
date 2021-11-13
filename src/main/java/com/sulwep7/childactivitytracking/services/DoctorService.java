@@ -39,4 +39,6 @@ public interface DoctorService {
     public void updateDoctorPhone(int id, String phone) throws NoSuchObjectException, InvalidParameterException;
 
     public void updateDoctorAddress(int id, String country, String city, String zipCode, String street, String nr) throws NoSuchObjectException, InvalidParameterException;
+
+    public void updateDoctor(Doctor doctor) throws NoSuchObjectException, InvalidParameterException;
 }

@@ -73,7 +73,10 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public void updateActivity(int id, String name) throws InvalidParameterException, NoSuchObjectException {
+    public void updateActivity(Activity activity) throws InvalidParameterException, NoSuchObjectException {
+        int id = activity.getId();
+        String name = activity.getName();
+
         //Data quality checks
         boolean isValidName = !StringUtils.isBlank(name);
         if (!isValidName) {

@@ -21,7 +21,7 @@ public class Doctor {
     private int userId;
     private String name;
     private String emailAddress;
-    private String phoneNumber;
+    private String phoneNr;
     private String city;
     private String street;
     private String streetNr;
@@ -35,7 +35,7 @@ public class Doctor {
         this.userId = user_id;
         this.name = name;
         this.emailAddress = email_address;
-        this.phoneNumber = phone_number;
+        this.phoneNr = phone_number;
         this.city = city;
         this.street = street;
         this.streetNr = street_nr;

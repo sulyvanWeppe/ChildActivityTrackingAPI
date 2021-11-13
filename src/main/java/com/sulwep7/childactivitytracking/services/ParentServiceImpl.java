@@ -162,4 +162,27 @@ public class ParentServiceImpl implements ParentService{
 
         parentRepository.updateParentEmail(id, email);
     }
+
+    @Override
+    public void updateParent(Parent parent) throws NoSuchObjectException, InvalidParameterException {
+        int id = parent.getId();
+        int userId = parent.getUserId();
+        String email = parent.getEmailAddress();
+        String firstName = parent.getFirstName();
+        String lastName = parent.getLastName();
+
+        //Data quality checks
+        boolean isValidEmail = !StringUtils.isBlank(email);
+        boolean isValidLastName = !StringUtils.isBlank(lastName);
+        boolean isValidFirstName = !StringUtils.isBlank(firstName);
+        if(!isValidFirstName || !isValidLastName || !isValidEmail) {
+            throw new InvalidParameterException("Input parameters of service updateParentFirstName are not valid : "+id+", "+firstName+", "+lastName+" and "+email);
+        }
+        boolean isValidId = parentRepository.existsById(id);
+        if (!isValidId) {
+            throw new NoSuchObjectException("No Parent found with id : "+id);
+        }
+
+        parentRepository.updateParent(id, userId, firstName, lastName, email);
+    }
 }

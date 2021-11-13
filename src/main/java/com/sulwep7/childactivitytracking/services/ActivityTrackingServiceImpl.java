@@ -161,4 +161,27 @@ public class ActivityTrackingServiceImpl implements ActivityTrackingService{
 
         activityTrackingRepository.updateActivityRemark(id, remark);
     }
+
+    @Override
+    public void updateActivityTracking(ActivityTracking activityTracking) throws NoSuchObjectException, InvalidParameterException {
+        int id = activityTracking.getId();
+        int childId = activityTracking.getChildId();
+        int activityId = activityTracking.getActivityId();
+        Timestamp activityTimestamp = activityTracking.getActivityTimestamp();
+        String activityRemark = activityTracking.getActivityRemark();
+
+        //Data quality checks
+        boolean isValidChildId = childRepository.existsById(childId);
+        boolean isValidActivityId = activityRepository.existsById(activityId);
+        boolean isValidRemark = !StringUtils.isBlank(activityRemark);
+        if (!isValidRemark) {
+            throw new InvalidParameterException("Input parameters for service updateActivityTrackingChild are not valid : "+id+", "+childId+", "+activityId+", "+activityTimestamp+" and "+activityRemark);
+        }
+        boolean isValidId = activityTrackingRepository.existsById(id);
+        if(!isValidId) {
+            throw new NoSuchObjectException("No activityTracking found with id : "+id);
+        }
+
+        activityTrackingRepository.updateActivityTracking(id, childId, activityId, activityTimestamp, activityRemark);
+    }
 }

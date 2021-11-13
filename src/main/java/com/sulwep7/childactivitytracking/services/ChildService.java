@@ -36,4 +36,6 @@ public interface ChildService {
     public void updateChildParent1(int id, int parent1Id) throws NoSuchObjectException, InvalidParameterException;
 
     public void updateChildParent2(int id, int parent2Id) throws NoSuchObjectException, InvalidParameterException;
+
+    public void updateChild(Child child) throws NoSuchObjectException, InvalidParameterException;
 }
