@@ -1,0 +1,25 @@
+application:
+  name: child-activity-tracking
+
+server:
+  port: 9443
+  error:
+    include-message: always
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/childActivityTracking
+    username: sulyvan
+    password: toto
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+jasypt:
+  encryptor:
+    password: dev
+
+logging:
+  file:
+    name: Logs/child_activity-tracking.log
