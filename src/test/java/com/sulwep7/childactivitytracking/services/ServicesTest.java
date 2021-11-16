@@ -143,7 +143,6 @@ public class ServicesTest {
             deletedActivityTracking = activityTrackingService.getActivityTrackingById(activityTracking.getId());
             Assertions.assertTrue(ObjectUtils.isEmpty(deletedActivityTracking));
         } catch (NoSuchObjectException e) {
-            e.printStackTrace();
             Assertions.assertTrue(true);
 
         }
@@ -152,7 +151,6 @@ public class ServicesTest {
             deletedActivity = activityService.getActivityById(activityId);
             Assertions.assertTrue(ObjectUtils.isEmpty(deletedActivity));
         } catch (NoSuchObjectException e) {
-            e.printStackTrace();
             Assertions.assertTrue(true);
         }
         Child deletedChild;
@@ -160,7 +158,6 @@ public class ServicesTest {
             deletedChild = childService.getChildById(childId);
             Assertions.assertTrue(ObjectUtils.isEmpty(deletedChild));
         } catch (NoSuchObjectException e) {
-            e.printStackTrace();
             Assertions.assertTrue(true);
         }
         Parent deletedParent1;
@@ -168,7 +165,6 @@ public class ServicesTest {
             deletedParent1 = parentService.getParentById(parent1Id);
             Assertions.assertTrue(ObjectUtils.isEmpty(deletedParent1));
         } catch (NoSuchObjectException e) {
-            e.printStackTrace();
             Assertions.assertTrue(true);
         }
         Parent deletedParent2;
@@ -176,7 +172,6 @@ public class ServicesTest {
             deletedParent2 = parentService.getParentById(parent2Id);
             Assertions.assertTrue(ObjectUtils.isEmpty(deletedParent2));
         } catch (NoSuchObjectException e) {
-            e.printStackTrace();
             Assertions.assertTrue(true);
         }
         Doctor deletedDoctor;
@@ -184,7 +179,6 @@ public class ServicesTest {
             deletedDoctor = doctorService.getDoctorById(doctor.getId());
             Assertions.assertTrue(ObjectUtils.isEmpty(deletedDoctor));
         } catch (NoSuchObjectException e) {
-            e.printStackTrace();
             Assertions.assertTrue(true);
         }
         User deletedUser;
@@ -192,7 +186,6 @@ public class ServicesTest {
             deletedUser = userService.getUserById(userId);
             Assertions.assertTrue(ObjectUtils.isEmpty(deletedUser));
         } catch (NoSuchObjectException e) {
-            e.printStackTrace();
             Assertions.assertTrue(true);
         }
     }

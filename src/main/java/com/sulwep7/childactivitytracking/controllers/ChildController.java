@@ -33,7 +33,7 @@ public class ChildController {
         }
     }
 
-    @GetMapping(value="/child/{parent1Id}", produces = "application/json")
+    @GetMapping(value="/child/parent1id/{parent1Id}", produces = "application/json")
     public List<Child> getChildrenByParent1(@PathVariable int parent1Id) {
         try {
             return childService.getChildrenByParent1Id(parent1Id);
@@ -42,7 +42,7 @@ public class ChildController {
         }
     }
 
-    @GetMapping(value="/child/{parent2Id}", produces = "application/json")
+    @GetMapping(value="/child/parent2id/{parent2Id}", produces = "application/json")
     public List<Child> getChildrenByParent2(@PathVariable int parent2Id) {
         try {
             return childService.getChildrenByParent2Id(parent2Id);
@@ -51,7 +51,7 @@ public class ChildController {
         }
     }
 
-    @GetMapping(value="/child/{parent1Id}/{parent2Id}", produces = "application/json")
+    @GetMapping(value="/child/parentsid/{parent1Id}/{parent2Id}", produces = "application/json")
     public List<Child> getChildrenByParents(@PathVariable int parent1Id, @PathVariable int parent2Id) {
         try {
             return childService.getChildrenByParentsId(parent1Id, parent2Id);
@@ -74,7 +74,12 @@ public class ChildController {
 
     @DeleteMapping(value = "/child/{id}", produces = "application/json")
     public ResponseEntity deleteChildById(@PathVariable int id) {
-        childService.deleteChildById(id);
+        try {
+            childService.deleteChildById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
         return new ResponseEntity(HttpStatus.OK);
     }
 

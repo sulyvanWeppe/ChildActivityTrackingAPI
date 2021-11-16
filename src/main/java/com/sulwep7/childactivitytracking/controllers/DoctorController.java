@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import javax.print.Doc;
 import java.rmi.NoSuchObjectException;
 import java.security.InvalidParameterException;
 import java.util.List;
@@ -34,7 +33,7 @@ public class DoctorController {
         }
     }
 
-    @GetMapping(value = "/doctor/{userid}", produces = "application/json")
+    @GetMapping(value = "/doctor/userid/{userid}", produces = "application/json")
     public List<Doctor> getDoctorsByUserId(@PathVariable int userid) {
         try {
             return doctorService.getDoctorsByUserId(userid);
@@ -69,13 +68,24 @@ public class DoctorController {
 
     @DeleteMapping(value="/doctor/{id}", produces = "application/json")
     public ResponseEntity deleteDoctorById(@PathVariable int id) {
-        doctorService.deleteDoctorById(id);
+        try {
+            doctorService.deleteDoctorById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    @DeleteMapping(value="/doctor/{userid}", produces = "application/json")
+    @DeleteMapping(value="/doctor/userid/{userid}", produces = "application/json")
     public ResponseEntity deleteDoctorByUser(@PathVariable int userid) {
-        doctorService.deleteDoctorByUserId(userid);
+        try {
+            doctorService.deleteDoctorByUserId(userid);
+        } catch(Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
         return new ResponseEntity(HttpStatus.OK);
     }
 }

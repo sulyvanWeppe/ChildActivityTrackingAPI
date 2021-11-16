@@ -32,7 +32,7 @@ public class ParentController {
         }
     }
 
-    @GetMapping(value="/parent/{firstName}/{lastName}", produces = "application/json")
+    @GetMapping(value="/parent/names/{firstName}/{lastName}", produces = "application/json")
     public List<Parent> getParentsByNames(@PathVariable String firstName, @PathVariable String lastName) {
         try {
             return parentService.getParentsByNames(firstName, lastName);
@@ -41,7 +41,7 @@ public class ParentController {
         }
     }
 
-    @GetMapping(value="/parent/{userId}", produces = "application/json")
+    @GetMapping(value="/parent/userid/{userId}", produces = "application/json")
     public List<Parent> getParentsByUser(@PathVariable int userId) {
         try {
             return parentService.getParentsByUserId(userId);
@@ -50,7 +50,7 @@ public class ParentController {
         }
     }
 
-    @GetMapping(value = "/parent/{email}", produces = "application/json")
+    @GetMapping(value = "/parent/email/{email}", produces = "application/json")
     public List<Parent> getParentByEmail(@PathVariable String email) {
         try {
             return parentService.getParentsByEmail(email);
@@ -61,7 +61,13 @@ public class ParentController {
 
     @DeleteMapping(value = "/parent/{id}", produces = "application/json")
     public ResponseEntity deleteParentById(@PathVariable int id) {
-        parentService.deleteParentById(id);
+        try {
+            parentService.deleteParentById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
         return new ResponseEntity(HttpStatus.OK);
     }
 

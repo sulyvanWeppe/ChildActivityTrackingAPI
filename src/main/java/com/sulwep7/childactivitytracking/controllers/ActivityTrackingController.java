@@ -1,8 +1,6 @@
 package com.sulwep7.childactivitytracking.controllers;
 
 import com.sulwep7.childactivitytracking.model.ActivityTracking;
-import com.sulwep7.childactivitytracking.services.ActivityServiceImpl;
-import com.sulwep7.childactivitytracking.services.ActivityTrackingService;
 import com.sulwep7.childactivitytracking.services.ActivityTrackingServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,7 +33,7 @@ public class ActivityTrackingController {
         }
     }
 
-    @GetMapping(value="/activitytracking/{activityid}", produces = "application/json")
+    @GetMapping(value="/activitytracking/activityid/{activityid}", produces = "application/json")
     public List<ActivityTracking> getActivitiesTrackingByActivity(@PathVariable int activityid) {
         try {
             return activityTrackingService.getActivitiesTrackingByActivityId(activityid);
@@ -44,7 +42,7 @@ public class ActivityTrackingController {
         }
     }
 
-    @GetMapping(value="/activitytracking/{childid}", produces = "application/json")
+    @GetMapping(value="/activitytracking/childid/{childid}", produces = "application/json")
     public List<ActivityTracking> getActivitiesTrackingByChild(@PathVariable int childid) {
         try {
             return activityTrackingService.getActivitiesTrackingByChildId(childid);
@@ -55,21 +53,35 @@ public class ActivityTrackingController {
 
     @DeleteMapping(value = "/activitytracking/{id}", produces = "application/json")
     public ResponseEntity deleteActivityTrackingById(@PathVariable int id) {
-        activityTrackingService.deleteActivityTrackingById(id);
+        try {
+            activityTrackingService.deleteActivityTrackingById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);}
 
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/activitytracking/{childid}", produces = "application/json")
+    @DeleteMapping(value = "/activitytracking/childid/{childid}", produces = "application/json")
     public ResponseEntity deleteActivityTrackingByChild(@PathVariable int childid) {
-        activityTrackingService.deleteActivityTrackingByChildId(childid);
+        try {
+            activityTrackingService.deleteActivityTrackingByChildId(childid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
 
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/activitytracking/{activityid}", produces = "application/json")
+    @DeleteMapping(value = "/activitytracking/activityid/{activityid}", produces = "application/json")
     public ResponseEntity deleteActivityTrackingByActivity(@PathVariable int activityid) {
-        activityTrackingService.deleteActivityTrackingByActivityId(activityid);
+        try {
+            activityTrackingService.deleteActivityTrackingByActivityId(activityid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
 
         return new ResponseEntity(HttpStatus.OK);
     }

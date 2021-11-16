@@ -6,7 +6,6 @@ import com.sulwep7.childactivitytracking.services.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -30,7 +29,7 @@ public class UserController {
         }
     }
 
-    @GetMapping(value="/user/{login}", produces="application/json")
+    @GetMapping(value="/user/login/{login}", produces="application/json")
     public User getByLogin(@PathVariable String login) {
         try {
             return userService.getUserByLogin(login);
@@ -39,7 +38,7 @@ public class UserController {
         }
     }
 
-    @GetMapping(value="/user/{email}", produces = "application/json")
+    @GetMapping(value="/user/email/{email}", produces = "application/json")
     public User getUserByEmail(@PathVariable String email) {
         try {
             return userService.getUserByEmailAddress(email);
@@ -75,20 +74,37 @@ public class UserController {
 
     @DeleteMapping(value="/user/{id}", produces = "application/json")
     public ResponseEntity deleteUserById(@PathVariable int id) {
-        userService.deleteUserById(id);
+        try {
+            userService.deleteUserById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    @DeleteMapping(value="/user/{login}", produces = "application/json")
+    @DeleteMapping(value="/user/login/{login}", produces = "application/json")
     public ResponseEntity deleteUserByLogin(@PathVariable String login)
     {
-        userService.deleteUserByLogin(login);
+        try {
+            userService.deleteUserByLogin(login);
+        } catch(Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    @DeleteMapping(value="/user/{email}", produces="application/json")
+    @DeleteMapping(value="/user/email/{email}", produces="application/json")
     public ResponseEntity deleteUserByEmail(@PathVariable String email) {
-        userService.deleteUserByEmail(email);
+        try {
+            userService.deleteUserByEmail(email);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
         return new ResponseEntity(HttpStatus.OK);
     }
 
