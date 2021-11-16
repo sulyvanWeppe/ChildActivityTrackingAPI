@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.sulwep7</groupId>
 	<artifactId>child-activity-tracking</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>child-activity-tracking</name>
 	<description>Application for tracking your child activity and health</description>
 	<properties>
