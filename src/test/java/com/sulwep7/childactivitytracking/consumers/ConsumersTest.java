@@ -7,8 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
 
 import java.sql.Timestamp;
@@ -105,7 +103,7 @@ public class ConsumersTest {
                 .zipCode("L-1234")
                 .country("Luxembourg")
                 .emailAddress("newDoctor@email.com")
-                .phoneNumber("+352123123123")
+                .phoneNr("+352123123123")
                 .userId(newUserId)
                 .build();
         newDoctor = doctorRepository.save(newDoctor);
@@ -125,22 +123,27 @@ public class ConsumersTest {
         userRepository.updateLogin(newUserId,"newUser2");
         userRepository.updateEmail(newUserId, "user@email2.com");
         userRepository.updatePassword(newUserId, "password2");
+        userRepository.updateUser(newUserId, "newUser3", "user@email3.com", "password3");
 
         doctorRepository.updateAddress(newDoctorId, "country2", "city2", "zipCode2", "street2", "2");
         doctorRepository.updatePhone(newDoctorId,"+352321321321");
         doctorRepository.updateEmail(newDoctorId, "doctor@email2.com");
         doctorRepository.updateName(newDoctorId,"doctor2");
+        doctorRepository.updateDoctor(newDoctorId, newUserId, "doctor3", "doctor@email3.com","+352123321123", "country3", "zipCode3", "city3","street3", "3");
 
         parentRepository.updateParentEmail(newParent1Id, "parent@email2.com");
         parentRepository.updateParentFirstName(newParent1Id, "firstName2");
         parentRepository.updateParentLastName(newParent1Id, "LastName2");
+        parentRepository.updateParent(newParent1Id, newUserId, "firstName3", "lastName3", "parent@email3.com");
 
         childRepository.updateParent1(newChildId,newParent2Id);
         childRepository.updateFirstName(newChildId,"firstName2");
         childRepository.updateLastName(newChildId,"lastName2");
+        childRepository.updateChild(newChildId,"firstName3","lastName3",newParent1Id,newParent2Id,12);
 
         activityTrackingRepository.updateActivityRemark(newActivityTrackingId,"remark2");
         activityTrackingRepository.updateActivityTimestamp(newActivityTrackingId, Timestamp.valueOf(LocalDateTime.now()));
+        activityTrackingRepository.updateActivityTracking(newActivityTrackingId,newChildId,newActivityId,Timestamp.valueOf(LocalDateTime.now()),"remark3");
 
         activityRepository.updateName(newActivityId, "name2");
 

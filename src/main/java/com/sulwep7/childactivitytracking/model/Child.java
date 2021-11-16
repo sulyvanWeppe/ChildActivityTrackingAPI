@@ -6,10 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Builder
@@ -21,7 +18,9 @@ public class Child {
     private String firstName;
     private String lastName;
     private int age;
+    @Column(name = "PARENT_2_ID")
     private int parent1Id;
+    @Column(name = "PARENT_1_ID")
     private int parent2Id;
 
     public Child() {}

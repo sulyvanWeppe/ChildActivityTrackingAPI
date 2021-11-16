@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.sulwep7</groupId>
 	<artifactId>child-activity-tracking</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>child-activity-tracking</name>
 	<description>Application for tracking your child activity and health</description>
 	<properties>
@@ -57,7 +57,19 @@
 			<artifactId>commons-validator</artifactId>
 			<version>1.3.0</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>com.vaadin.external.google</groupId>
+            <artifactId>android-json</artifactId>
+            <version>0.0.20131108.vaadin1</version>
+            <scope>test</scope>
+        </dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20210307</version>
+		</dependency>
+
+    </dependencies>
 
 	<build>
 		<plugins>

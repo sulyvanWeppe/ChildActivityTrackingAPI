@@ -159,16 +159,10 @@ public class UserServiceImpl implements UserService{
         String password = user.getPassword();
 
         boolean isValidLogin = !StringUtils.isBlank(login);
-        if (!isValidLogin) {
-            throw new InvalidParameterException("Input parameters of service updateUserLogin are not valid : "+id+" and "+login);
-        }
         boolean isValidPassword = !StringUtils.isBlank(password);
-        if (!isValidPassword) {
-            throw new InvalidParameterException("Input parameters of service updateUserLogin are not valid : "+id+" and "+password);
-        }
         boolean isValidEmail = !StringUtils.isBlank(email) && EmailValidator.getInstance().isValid(email);
-        if (!isValidEmail) {
-            throw new InvalidParameterException("Input parameters of service updateUserLogin are not valid : "+id+" and "+email);
+        if (!isValidLogin || !isValidPassword || !isValidEmail) {
+            throw new InvalidParameterException("Input parameters of service updateUserLogin are not valid : "+id+", "+login+", "+password+" and "+email);
         }
         boolean isValidId = userRepository.existsById(id);
         if (!isValidId) {

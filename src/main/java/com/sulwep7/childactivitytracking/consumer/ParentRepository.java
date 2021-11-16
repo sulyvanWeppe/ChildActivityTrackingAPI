@@ -55,4 +55,9 @@ public interface ParentRepository extends CrudRepository<Parent, Integer> {
     @Modifying
     @Query("update Parent p set email_address=:email where id=:id")
     void updateParentEmail(int id, String email);
+
+    @Transactional
+    @Modifying
+    @Query("update Parent p set user_id=:userId, first_name=:firstName, last_name=:lastName, email_address=:email where id=:id")
+    void updateParent(int id, int userId, String firstName, String lastName, String email);
 }

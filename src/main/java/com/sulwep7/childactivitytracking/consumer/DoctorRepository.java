@@ -22,7 +22,7 @@ public interface DoctorRepository extends CrudRepository<Doctor, Integer> {
     Doctor findByEmailAddress(String emailAddress);
 
     @Query("select d from Doctor d where phone_nr=:phoneNumber")
-    Doctor findByPhoneNumber(String phoneNumber);
+    Doctor findByPhoneNr(String phoneNumber);
 
     List<Doctor> findByCity(String city);
 
@@ -72,4 +72,8 @@ public interface DoctorRepository extends CrudRepository<Doctor, Integer> {
     @Query("update Doctor d set country=:country, city=:city, zip_code=:zipCode, street=:street, street_nr=:nr where id=:id")
     void updateAddress(int id, String country, String city, String zipCode, String street, String nr);
 
+    @Transactional
+    @Modifying
+    @Query("update Doctor d set user_id=:userId, name=:name, email_address=:email, phone_nr=:phone, country=:country, zip_code=:zipCode, city=:city, street=:street, street_nr=:nr where id=:id")
+    void updateDoctor(int id, int userId, String name, String email, String phone, String country, String zipCode, String city, String street, String nr);
 }

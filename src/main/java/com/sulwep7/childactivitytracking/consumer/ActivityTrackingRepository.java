@@ -50,4 +50,9 @@ public interface ActivityTrackingRepository extends CrudRepository<ActivityTrack
     @Query("update ActivityTracking at set activity_remark=:remark where id=:id")
     void updateActivityRemark(int id, String remark);
 
+    @Transactional
+    @Modifying
+    @Query("update ActivityTracking at set child_id=:childId, activity_id=:activityId, activity_timestamp=:activityTimestamp, activity_remark=:activityRemark where id=:id")
+    void updateActivityTracking(int id, int childId, int activityId, Timestamp activityTimestamp, String activityRemark);
+
 }

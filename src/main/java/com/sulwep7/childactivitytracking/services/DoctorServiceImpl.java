@@ -1,6 +1,7 @@
 package com.sulwep7.childactivitytracking.services;
 
 import com.sulwep7.childactivitytracking.consumer.DoctorRepository;
+import com.sulwep7.childactivitytracking.consumer.UserRepository;
 import com.sulwep7.childactivitytracking.model.Doctor;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.validator.EmailValidator;
@@ -19,6 +20,8 @@ public class DoctorServiceImpl implements DoctorService{
     private DoctorRepository doctorRepository;
     @Autowired
     private UserServiceImpl userService;
+    @Autowired
+    private UserRepository userRepository;
 
     @Override
     public List<Doctor> getDoctors() {
@@ -101,7 +104,7 @@ public class DoctorServiceImpl implements DoctorService{
         Doctor doctor = Doctor.builder()
                 .userId(userId)
                 .name(name)
-                .phoneNumber(phoneNr)
+                .phoneNr(phoneNr)
                 .emailAddress(email)
                 .streetNr(nr)
                 .street(street)
@@ -152,7 +155,7 @@ public class DoctorServiceImpl implements DoctorService{
     @Override
     public void updateDoctorEmail(int id, String email) throws NoSuchObjectException, InvalidParameterException {
         //Data quality checks
-        boolean isValidEmail = !StringUtils.isBlank(email);
+        boolean isValidEmail = !StringUtils.isBlank(email) && EmailValidator.getInstance().isValid(email);
         if(!isValidEmail) {
             throw new InvalidParameterException("Input parameters for service updateDoctorName are not valid : "+id+" and "+email);
         }
@@ -197,4 +200,39 @@ public class DoctorServiceImpl implements DoctorService{
 
         doctorRepository.updateAddress(id, country, city, zipCode, street, nr);
     }
+
+    @Override
+    public void updateDoctor(Doctor doctor) throws NoSuchObjectException, InvalidParameterException {
+        int id =doctor.getId();
+        int userId = doctor.getUserId();
+        String name = doctor.getName();
+        String email = doctor.getEmailAddress();
+        String phone = doctor.getPhoneNr();
+        String country = doctor.getCountry();
+        String zipCode = doctor.getZipCode();
+        String city = doctor.getCity();
+        String street = doctor.getStreet();
+        String nr = doctor.getStreetNr();
+
+        //Data quality checks
+        boolean isValidUserId = userRepository.existsById(userId);
+        boolean isValidName = !StringUtils.isBlank(name);
+        boolean isValidEmail = !StringUtils.isBlank(email) && EmailValidator.getInstance().isValid(email);
+        boolean isValidPhone = !StringUtils.isBlank(phone);
+        boolean isValidAddress = !StringUtils.isBlank(country)
+                && !StringUtils.isBlank(city)
+                && !StringUtils.isBlank(zipCode)
+                && !StringUtils.isBlank(street)
+                && !StringUtils.isBlank(nr);
+        if(!isValidUserId || !isValidName || !isValidEmail || !isValidPhone || !isValidAddress) {
+            throw new InvalidParameterException("Input parameters for service updateDoctorName are not valid : "+id+", "+userId+", "+name+", "+email+", "+phone+" and "+nr+" "+street+", "+zipCode+" "+city+", "+country);
+        }
+        boolean isValidId = doctorRepository.existsById(id);
+        if (!isValidId) {
+            throw new NoSuchObjectException("No doctor found with id : "+id);
+        }
+
+        doctorRepository.updateDoctor(id, userId, name, email, phone, country, zipCode, city, street, nr);
+    }
+
 }

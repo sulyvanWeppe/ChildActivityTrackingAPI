@@ -32,4 +32,6 @@ public interface ActivityTrackingService {
     public void updateActivityTrackingTimestamp(int id, Timestamp timestamp) throws InvalidParameterException, NoSuchObjectException;
 
     public void updateActivityTrackingRemark(int id, String remark) throws InvalidParameterException, NoSuchObjectException;
+
+    public void updateActivityTracking(ActivityTracking activityTracking) throws NoSuchObjectException, InvalidParameterException;
 }

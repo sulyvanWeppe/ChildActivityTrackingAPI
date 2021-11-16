@@ -27,4 +27,5 @@ public interface ActivityRepository extends CrudRepository<Activity, Integer> {
     @Modifying
     @Query("update Activity a set name=:name where id=:id")
     void updateName(int id, String name);
+
 }

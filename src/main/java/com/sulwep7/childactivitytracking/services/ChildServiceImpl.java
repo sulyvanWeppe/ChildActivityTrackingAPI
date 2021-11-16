@@ -89,7 +89,7 @@ public class ChildServiceImpl implements ChildService{
         //Data quality checks
         boolean isValidFirstName = !StringUtils.isBlank(firstName);
         boolean isValidLastName = !StringUtils.isBlank(lastName);
-        boolean isValidAge = age <= (18*12); //Application is designed for children => under 18
+        boolean isValidAge = age >= 0 && age <= (18*12); //Application is designed for children => under 18
         boolean areValidParentsId = parentRepository.existsById(parent1Id) && parentRepository.existsById(parent2Id);
 
         if (!isValidAge || !isValidFirstName || !isValidLastName || !areValidParentsId) {
@@ -181,5 +181,31 @@ public class ChildServiceImpl implements ChildService{
         }
 
         childRepository.updateParent2(id, parent2Id);
+    }
+
+    @Override
+    public void updateChild(Child child) throws NoSuchObjectException, InvalidParameterException {
+        int id = child.getId();
+        String firstName = child.getFirstName();
+        String lastName = child.getLastName();
+        int parent1Id = child.getParent1Id();
+        int parent2Id = child.getParent2Id();
+        int age = child.getAge();
+
+        //Data quality checks
+        boolean isValidFirstName = !StringUtils.isBlank(firstName);
+        boolean isValidLastName = !StringUtils.isBlank(lastName);
+        boolean isValidParent1Id = parentRepository.existsById(parent1Id);
+        boolean isValidParent2Id = parentRepository.existsById(parent2Id);
+        boolean isValidAge = age >= 0 && age <= (18*12); //Application is designed for children => under 18
+        if (!isValidFirstName || !isValidLastName ||!isValidParent1Id || !isValidParent2Id || !isValidAge) {
+            throw new InvalidParameterException("Input parameters for service updateChildFirstName are not valid : "+id+", "+firstName+", "+lastName+", "+parent1Id+", "+parent2Id+" and "+age);
+        }
+        boolean isValidId = childRepository.existsById(id);
+        if (!isValidId) {
+            throw new NoSuchObjectException("No child found with id : "+id);
+        }
+
+        childRepository.updateChild(id, firstName, lastName, parent1Id, parent2Id, age);
     }
 }
