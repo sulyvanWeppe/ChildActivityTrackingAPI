@@ -10,6 +10,7 @@ import org.springframework.util.ObjectUtils;
 
 import java.rmi.NoSuchObjectException;
 import java.security.InvalidParameterException;
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.Instant;
 
@@ -78,10 +79,10 @@ public class ServicesTest {
         int parent2Id = parent2.getId();
         String childFirstName = "childFirstName";
         String childLastName = "childLastName";
-        int childAge = 11;
+        Timestamp childBirthDate = Timestamp.from(Instant.now());
         Child child = null;
         try {
-            child = childService.createChild(childFirstName, childLastName, parent1Id, parent2Id, childAge);
+            child = childService.createChild(childFirstName, childLastName, parent1Id, parent2Id, childBirthDate);
             Assertions.assertTrue(!ObjectUtils.isEmpty(child));
         } catch (InvalidParameterException e) {
             Assertions.assertTrue(!ObjectUtils.isEmpty(child));

@@ -64,7 +64,7 @@ public class ChildController {
     public Child createChild(@RequestBody Child child) {
         Child newChild = null;
         try {
-            newChild = childService.createChild(child.getFirstName(), child.getLastName(), child.getParent1Id(), child.getParent2Id(), child.getAge());
+            newChild = childService.createChild(child.getFirstName(), child.getLastName(), child.getParent1Id(), child.getParent2Id(), child.getBirthDate());
         } catch(InvalidParameterException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
         }

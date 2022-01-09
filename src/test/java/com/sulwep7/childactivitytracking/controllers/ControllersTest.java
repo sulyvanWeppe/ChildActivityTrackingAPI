@@ -113,7 +113,7 @@ public class ControllersTest {
 
         //Child
         Child child = Child.builder()
-                .age(11)
+                .birthDate(Timestamp.from(Instant.now()))
                 .parent1Id(newParent1.getId())
                 .parent2Id(newParent2.getId())
                 .lastName("parent2LastName")
