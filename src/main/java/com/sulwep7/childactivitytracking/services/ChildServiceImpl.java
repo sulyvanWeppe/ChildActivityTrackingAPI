@@ -10,6 +10,7 @@ import org.springframework.util.ObjectUtils;
 
 import java.rmi.NoSuchObjectException;
 import java.security.InvalidParameterException;
+import java.sql.Timestamp;
 import java.util.List;
 
 @Service
@@ -85,15 +86,14 @@ public class ChildServiceImpl implements ChildService{
     }
 
     @Override
-    public Child createChild(String firstName, String lastName, int parent1Id, int parent2Id, int age) throws InvalidParameterException {
+    public Child createChild(String firstName, String lastName, int parent1Id, int parent2Id, Timestamp birthDate) throws InvalidParameterException {
         //Data quality checks
         boolean isValidFirstName = !StringUtils.isBlank(firstName);
         boolean isValidLastName = !StringUtils.isBlank(lastName);
-        boolean isValidAge = age >= 0 && age <= (18*12); //Application is designed for children => under 18
         boolean areValidParentsId = parentRepository.existsById(parent1Id) && parentRepository.existsById(parent2Id);
 
-        if (!isValidAge || !isValidFirstName || !isValidLastName || !areValidParentsId) {
-            throw new InvalidParameterException("Input parameters of service createChild are not valid : "+firstName+", "+lastName+", "+age+", "+parent1Id+" and "+parent2Id);
+        if (!isValidFirstName || !isValidLastName || !areValidParentsId) {
+            throw new InvalidParameterException("Input parameters of service createChild are not valid : "+firstName+", "+lastName+", "+birthDate+", "+parent1Id+" and "+parent2Id);
         }
 
         Child child = Child.builder()
@@ -101,7 +101,7 @@ public class ChildServiceImpl implements ChildService{
                 .lastName(lastName)
                 .parent1Id(parent1Id)
                 .parent2Id(parent2Id)
-                .age(age)
+                .birthDate(birthDate)
                 .build();
         child = childRepository.save(child);
 
@@ -190,22 +190,21 @@ public class ChildServiceImpl implements ChildService{
         String lastName = child.getLastName();
         int parent1Id = child.getParent1Id();
         int parent2Id = child.getParent2Id();
-        int age = child.getAge();
+        Timestamp birthDate = child.getBirthDate();
 
         //Data quality checks
         boolean isValidFirstName = !StringUtils.isBlank(firstName);
         boolean isValidLastName = !StringUtils.isBlank(lastName);
         boolean isValidParent1Id = parentRepository.existsById(parent1Id);
         boolean isValidParent2Id = parentRepository.existsById(parent2Id);
-        boolean isValidAge = age >= 0 && age <= (18*12); //Application is designed for children => under 18
-        if (!isValidFirstName || !isValidLastName ||!isValidParent1Id || !isValidParent2Id || !isValidAge) {
-            throw new InvalidParameterException("Input parameters for service updateChildFirstName are not valid : "+id+", "+firstName+", "+lastName+", "+parent1Id+", "+parent2Id+" and "+age);
+        if (!isValidFirstName || !isValidLastName ||!isValidParent1Id || !isValidParent2Id) {
+            throw new InvalidParameterException("Input parameters for service updateChildFirstName are not valid : "+id+", "+firstName+", "+lastName+", "+parent1Id+", "+parent2Id+" and "+birthDate);
         }
         boolean isValidId = childRepository.existsById(id);
         if (!isValidId) {
             throw new NoSuchObjectException("No child found with id : "+id);
         }
 
-        childRepository.updateChild(id, firstName, lastName, parent1Id, parent2Id, age);
+        childRepository.updateChild(id, firstName, lastName, parent1Id, parent2Id, birthDate);
     }
 }

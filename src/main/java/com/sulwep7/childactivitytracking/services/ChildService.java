@@ -4,6 +4,7 @@ import com.sulwep7.childactivitytracking.model.Child;
 
 import java.rmi.NoSuchObjectException;
 import java.security.InvalidParameterException;
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.prefs.NodeChangeEvent;
 
@@ -21,7 +22,7 @@ public interface ChildService {
 
     public List<Child> getChildrenByParentsId(int parent1Id, int parent2Id) throws NoSuchObjectException;
 
-    public Child createChild(String firstName, String lastName, int parent1Id, int parent2Id, int age) throws InvalidParameterException;
+    public Child createChild(String firstName, String lastName, int parent1Id, int parent2Id, Timestamp birthDate) throws InvalidParameterException;
 
     public void deleteChildById(int id);
 

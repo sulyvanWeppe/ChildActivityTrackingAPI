@@ -9,6 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
+import java.sql.Timestamp;
 import java.util.List;
 
 public interface ChildRepository extends CrudRepository<Child, Integer> {
@@ -24,7 +25,7 @@ public interface ChildRepository extends CrudRepository<Child, Integer> {
     @Query("select c from Child c where first_name=:firstName and last_name=:lastName")
     List<Child> findByNames(String firstName, String lastName);
 
-    List<Child> findByAge(int age);
+    List<Child> findByBirthDate(Timestamp birthDate);
 
     List<Child> findByParent1Id(int parent1Id);
 
@@ -66,6 +67,6 @@ public interface ChildRepository extends CrudRepository<Child, Integer> {
 
     @Transactional
     @Modifying
-    @Query("update Child c set first_name=:firstName, last_name=:lastName, parent_1_id=:parent1Id, parent_2_id=:parent2Id, age=:age where id=:id")
-    void updateChild(int id, String firstName, String lastName, int parent1Id, int parent2Id, int age);
+    @Query("update Child c set first_name=:firstName, last_name=:lastName, parent_1_id=:parent1Id, parent_2_id=:parent2Id, birthDate=:birthDate where id=:id")
+    void updateChild(int id, String firstName, String lastName, int parent1Id, int parent2Id, Timestamp birthDate);
 }

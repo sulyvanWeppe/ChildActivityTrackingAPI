@@ -72,7 +72,7 @@ public class ConsumersTest {
                 .lastName("newChildLastName")
                 .parent1Id(newParent1Id)
                 .parent2Id(newParent2Id)
-                .age(11)
+                .birthDate(Timestamp.from(Instant.now()))
                 .build();
         newChild = childRepository.save(newChild);
         int newChildId = newChild.getId();
@@ -139,7 +139,7 @@ public class ConsumersTest {
         childRepository.updateParent1(newChildId,newParent2Id);
         childRepository.updateFirstName(newChildId,"firstName2");
         childRepository.updateLastName(newChildId,"lastName2");
-        childRepository.updateChild(newChildId,"firstName3","lastName3",newParent1Id,newParent2Id,12);
+        childRepository.updateChild(newChildId,"firstName3","lastName3",newParent1Id,newParent2Id,Timestamp.from(Instant.now()));
 
         activityTrackingRepository.updateActivityRemark(newActivityTrackingId,"remark2");
         activityTrackingRepository.updateActivityTimestamp(newActivityTrackingId, Timestamp.valueOf(LocalDateTime.now()));
