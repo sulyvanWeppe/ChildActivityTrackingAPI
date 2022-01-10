@@ -90,7 +90,7 @@ public class ChildServiceImpl implements ChildService{
         //Data quality checks
         boolean isValidFirstName = !StringUtils.isBlank(firstName);
         boolean isValidLastName = !StringUtils.isBlank(lastName);
-        boolean areValidParentsId = parentRepository.existsById(parent1Id) && parentRepository.existsById(parent2Id);
+        boolean areValidParentsId = parentRepository.existsById(parent1Id) && parentRepository.existsById(parent2Id); //At least one parent must exist
 
         if (!isValidFirstName || !isValidLastName || !areValidParentsId) {
             throw new InvalidParameterException("Input parameters of service createChild are not valid : "+firstName+", "+lastName+", "+birthDate+", "+parent1Id+" and "+parent2Id);

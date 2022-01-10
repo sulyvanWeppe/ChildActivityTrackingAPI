@@ -1,509 +1,208 @@
-2022-01-09 15:56:21.445  WARN 6127 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+2022-01-10 21:18:35.568  INFO 5506 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 5506 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
+2022-01-10 21:18:35.578  INFO 5506 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
+2022-01-10 21:18:37.094  INFO 5506 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-10 21:18:37.248  INFO 5506 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 6 JPA repository interfaces.
+2022-01-10 21:18:38.429  INFO 5506 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
+2022-01-10 21:18:38.447  INFO 5506 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-10 21:18:38.450  INFO 5506 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-10 21:18:38.608  INFO 5506 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-10 21:18:38.609  INFO 5506 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2914 ms
+2022-01-10 21:18:38.979  INFO 5506 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-10 21:18:39.057  INFO 5506 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-01-10 21:18:39.300  INFO 5506 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-10 21:18:39.454  INFO 5506 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-10 21:18:40.170  INFO 5506 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-10 21:18:40.230  INFO 5506 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-10 21:18:41.591  INFO 5506 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-10 21:18:41.602  INFO 5506 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-10 21:18:42.751  WARN 5506 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-10 21:18:43.517  INFO 5506 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
+2022-01-10 21:18:43.548  INFO 5506 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 9.155 seconds (JVM running for 10.055)
+2022-01-10 21:19:02.468  INFO 5506 --- [http-nio-9443-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-10 21:19:02.468  INFO 5506 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-10 21:19:02.469  INFO 5506 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-10 21:27:02.995  INFO 5506 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-10 21:27:02.998  INFO 5506 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-10 21:27:03.005  INFO 5506 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-10 21:32:03.882  INFO 7237 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 7237 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
+2022-01-10 21:32:03.885  INFO 7237 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
+2022-01-10 21:32:04.829  INFO 7237 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-10 21:32:04.917  INFO 7237 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 6 JPA repository interfaces.
+2022-01-10 21:32:05.613  INFO 7237 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
+2022-01-10 21:32:05.625  INFO 7237 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-10 21:32:05.625  INFO 7237 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-10 21:32:05.709  INFO 7237 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-10 21:32:05.710  INFO 7237 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1730 ms
+2022-01-10 21:32:05.898  INFO 7237 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-10 21:32:05.938  INFO 7237 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-01-10 21:32:06.047  INFO 7237 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-10 21:32:06.140  INFO 7237 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-10 21:32:06.476  INFO 7237 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-10 21:32:06.502  INFO 7237 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-10 21:32:07.120  INFO 7237 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-10 21:32:07.127  INFO 7237 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-10 21:32:07.921  WARN 7237 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-10 21:32:08.264  INFO 7237 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
+2022-01-10 21:32:08.275  INFO 7237 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 4.971 seconds (JVM running for 5.464)
+2022-01-10 21:32:21.948  INFO 7237 --- [http-nio-9443-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-10 21:32:21.949  INFO 7237 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-10 21:32:21.953  INFO 7237 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-01-10 22:39:43.805  INFO 7237 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-10 22:39:43.807  INFO 7237 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-10 22:39:43.810  INFO 7237 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-10 22:40:16.771  INFO 10981 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 10981 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
+2022-01-10 22:40:16.774  INFO 10981 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
+2022-01-10 22:40:17.688  INFO 10981 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-10 22:40:17.778  INFO 10981 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 6 JPA repository interfaces.
+2022-01-10 22:40:18.468  INFO 10981 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
+2022-01-10 22:40:18.479  INFO 10981 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-10 22:40:18.479  INFO 10981 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-10 22:40:18.565  INFO 10981 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-10 22:40:18.565  INFO 10981 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1711 ms
+2022-01-10 22:40:18.753  INFO 10981 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-10 22:40:18.785  INFO 10981 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-01-10 22:40:18.878  INFO 10981 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-10 22:40:18.954  INFO 10981 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-10 22:40:19.256  INFO 10981 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-10 22:40:19.277  INFO 10981 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-10 22:40:19.849  INFO 10981 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-10 22:40:19.856  INFO 10981 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-10 22:40:20.670  WARN 10981 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-10 22:40:21.014  INFO 10981 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
+2022-01-10 22:40:21.023  INFO 10981 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 4.769 seconds (JVM running for 5.183)
+2022-01-10 22:40:27.565  INFO 10981 --- [http-nio-9443-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-10 22:40:27.565  INFO 10981 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-10 22:40:27.567  INFO 10981 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-01-10 22:40:59.452  WARN 10981 --- [http-nio-9443-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1452, SQLState: 23000
+2022-01-10 22:40:59.453 ERROR 10981 --- [http-nio-9443-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Cannot add or update a child row: a foreign key constraint fails (`childActivityTracking`.`child`, CONSTRAINT `child_ibfk_2` FOREIGN KEY (`parent_2_id`) REFERENCES `parent` (`id`))
+2022-01-10 22:40:59.477 ERROR 10981 --- [http-nio-9443-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
 
-Found multiple occurrences of org.json.JSONObject on the class path:
+java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`childActivityTracking`.`child`, CONSTRAINT `child_ibfk_2` FOREIGN KEY (`parent_2_id`) REFERENCES `parent` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1350) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3298) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3825) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:723) ~[na:na]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:99) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1362) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:453) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3212) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2380) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:448) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562) ~[spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.10.jar:5.3.10]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.10.jar:5.3.10]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.5.5.jar:2.5.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.10.jar:5.3.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.10.jar:5.3.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.10.jar:5.3.10]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.10.jar:5.3.10]
+	at jdk.proxy2/jdk.proxy2.$Proxy91.save(Unknown Source) ~[na:na]
+	at com.sulwep7.childactivitytracking.services.ChildServiceImpl.createChild(ChildServiceImpl.java:106) ~[classes/:na]
+	at com.sulwep7.childactivitytracking.controllers.ChildController.createChild(ChildController.java:67) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
 
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 15:56:21.461  INFO 6127 --- [main] c.s.c.controllers.ControllersTest        : Starting ControllersTest using Java 16.0.1 on sulyvan-N501VW with PID 6127 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 15:56:21.464  INFO 6127 --- [main] c.s.c.controllers.ControllersTest        : No active profile set, falling back to default profiles: default
-2022-01-09 15:56:22.092  INFO 6127 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 15:56:22.184  INFO 6127 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 6 JPA repository interfaces.
-2022-01-09 15:56:22.905  INFO 6127 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 15:56:22.964  INFO 6127 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2022-01-09 15:56:23.084  INFO 6127 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-09 15:56:23.184  INFO 6127 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-09 15:56:23.569  INFO 6127 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-09 15:56:23.603  INFO 6127 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 15:56:24.192  INFO 6127 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 15:56:24.199  INFO 6127 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 15:56:25.108  WARN 6127 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 15:56:25.710  INFO 6127 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-01-09 15:56:25.711  INFO 6127 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-01-09 15:56:25.712  INFO 6127 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2022-01-09 15:56:25.736  INFO 6127 --- [main] c.s.c.controllers.ControllersTest        : Started ControllersTest in 4.624 seconds (JVM running for 5.619)
-2022-01-09 15:56:26.137  INFO 6127 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.sulwep7.childactivitytracking.consumers.ConsumersTest], using SpringBootContextLoader
-2022-01-09 15:56:26.138  INFO 6127 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.sulwep7.childactivitytracking.consumers.ConsumersTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-01-09 15:56:26.138  INFO 6127 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.sulwep7.childactivitytracking.consumers.ConsumersTest]: ConsumersTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-01-09 15:56:26.143  INFO 6127 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.sulwep7.childactivitytracking.ChildActivityTrackingApplication for test class com.sulwep7.childactivitytracking.consumers.ConsumersTest
-2022-01-09 15:56:26.146  INFO 6127 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-01-09 15:56:26.146  INFO 6127 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6b44121e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@28b286c0, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@718e700c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5b5e45bc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@10c1682b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2cf97875, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2e7563f6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@72fa021, org.springframework.test.context.event.EventPublishingTestExecutionListener@1c3400df, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7be9e9fc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7e864fa4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@452d6fd, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@38dc1c50, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@ccea4be, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@40f931ec]
-2022-01-09 15:56:26.186  WARN 6127 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 15:56:26.189  INFO 6127 --- [main] c.s.c.consumers.ConsumersTest            : Starting ConsumersTest using Java 16.0.1 on sulyvan-N501VW with PID 6127 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 15:56:26.194  INFO 6127 --- [main] c.s.c.consumers.ConsumersTest            : No active profile set, falling back to default profiles: default
-2022-01-09 15:56:26.387  INFO 6127 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 15:56:26.407  INFO 6127 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 6 JPA repository interfaces.
-2022-01-09 15:56:26.538  INFO 6127 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 15:56:26.542  INFO 6127 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2022-01-09 15:56:26.563  INFO 6127 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2022-01-09 15:56:26.563  INFO 6127 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 15:56:26.647  INFO 6127 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 15:56:26.648  INFO 6127 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 15:56:27.043  WARN 6127 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 15:56:27.257  INFO 6127 --- [main] c.s.c.consumers.ConsumersTest            : Started ConsumersTest in 1.106 seconds (JVM running for 7.14)
-2022-01-09 15:56:28.533  INFO 6127 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.sulwep7.childactivitytracking.services.ServicesTest], using SpringBootContextLoader
-2022-01-09 15:56:28.534  INFO 6127 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.sulwep7.childactivitytracking.services.ServicesTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-01-09 15:56:28.535  INFO 6127 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.sulwep7.childactivitytracking.services.ServicesTest]: ServicesTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-01-09 15:56:28.541  INFO 6127 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.sulwep7.childactivitytracking.ChildActivityTrackingApplication for test class com.sulwep7.childactivitytracking.services.ServicesTest
-2022-01-09 15:56:28.543  INFO 6127 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-01-09 15:56:28.543  INFO 6127 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@50e32998, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5fc76532, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2e268c19, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@baf87a5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@42c9c0a1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2643c33f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3c1fd5aa, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4bfaff23, org.springframework.test.context.event.EventPublishingTestExecutionListener@47bae235, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7f588bc6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3da8a302, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@21b75073, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@318ca53a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@ab11e76, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@72f91c91]
-2022-01-09 15:56:28.574  WARN 6127 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 15:56:28.576  INFO 6127 --- [main] c.s.c.services.ServicesTest              : Starting ServicesTest using Java 16.0.1 on sulyvan-N501VW with PID 6127 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 15:56:28.578  INFO 6127 --- [main] c.s.c.services.ServicesTest              : No active profile set, falling back to default profiles: default
-2022-01-09 15:56:28.755  INFO 6127 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 15:56:28.773  INFO 6127 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 6 JPA repository interfaces.
-2022-01-09 15:56:28.899  INFO 6127 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 15:56:28.902  INFO 6127 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2022-01-09 15:56:28.922  INFO 6127 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2022-01-09 15:56:28.922  INFO 6127 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 15:56:28.996  INFO 6127 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 15:56:28.996  INFO 6127 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 15:56:29.320  WARN 6127 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 15:56:29.518  INFO 6127 --- [main] c.s.c.services.ServicesTest              : Started ServicesTest in 0.972 seconds (JVM running for 9.4)
-2022-01-09 15:56:29.594  INFO 6127 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 15:56:29.596  INFO 6127 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-09 15:56:29.617  INFO 6127 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-09 15:56:29.623  INFO 6127 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 15:56:29.624  INFO 6127 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2022-01-09 15:56:29.629  INFO 6127 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2022-01-09 15:56:29.632  INFO 6127 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 15:56:29.633  INFO 6127 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2022-01-09 15:56:29.641  INFO 6127 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2022-01-09 15:56:59.370  WARN 6342 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 15:56:59.382  INFO 6342 --- [main] c.s.c.controllers.ControllersTest        : Starting ControllersTest using Java 16.0.1 on sulyvan-N501VW with PID 6342 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 15:56:59.385  INFO 6342 --- [main] c.s.c.controllers.ControllersTest        : No active profile set, falling back to default profiles: default
-2022-01-09 15:57:00.151  INFO 6342 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 15:57:00.241  INFO 6342 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 6 JPA repository interfaces.
-2022-01-09 15:57:00.863  INFO 6342 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 15:57:00.904  INFO 6342 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2022-01-09 15:57:01.009  INFO 6342 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-09 15:57:01.105  INFO 6342 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-09 15:57:01.454  INFO 6342 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-09 15:57:01.476  INFO 6342 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 15:57:02.064  INFO 6342 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 15:57:02.071  INFO 6342 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 15:57:03.028  WARN 6342 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 15:57:03.533  INFO 6342 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-01-09 15:57:03.533  INFO 6342 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-01-09 15:57:03.534  INFO 6342 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2022-01-09 15:57:03.554  INFO 6342 --- [main] c.s.c.controllers.ControllersTest        : Started ControllersTest in 4.509 seconds (JVM running for 5.91)
-2022-01-09 15:57:03.890  INFO 6342 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 15:57:03.893  INFO 6342 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-09 15:57:03.903  INFO 6342 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-09 15:58:48.850  WARN 6561 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 15:58:48.861  INFO 6561 --- [main] c.s.c.controllers.ControllersTest        : Starting ControllersTest using Java 16.0.1 on sulyvan-N501VW with PID 6561 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 15:58:48.864  INFO 6561 --- [main] c.s.c.controllers.ControllersTest        : No active profile set, falling back to default profiles: default
-2022-01-09 15:58:49.597  INFO 6561 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 15:58:49.680  INFO 6561 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 6 JPA repository interfaces.
-2022-01-09 15:58:50.272  INFO 6561 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 15:58:50.324  INFO 6561 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2022-01-09 15:58:50.419  INFO 6561 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-09 15:58:50.496  INFO 6561 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-09 15:58:50.817  INFO 6561 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-09 15:58:50.841  INFO 6561 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 15:58:51.453  INFO 6561 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 15:58:51.459  INFO 6561 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 15:58:52.463  WARN 6561 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 15:58:52.980  INFO 6561 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-01-09 15:58:52.981  INFO 6561 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-01-09 15:58:52.982  INFO 6561 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2022-01-09 15:58:53.001  INFO 6561 --- [main] c.s.c.controllers.ControllersTest        : Started ControllersTest in 4.516 seconds (JVM running for 5.811)
-2022-01-09 15:58:53.401  INFO 6561 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created user User(id=0, emailAddress=toto@email.com, login=toto, password=totoPassword)
-2022-01-09 15:58:53.470  INFO 6561 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created parent Parent(id=614, userId=613, firstName=parent1FirstName, lastName=parent1LastName, emailAddress=parent1@email.com)
-2022-01-09 15:58:53.555  INFO 6561 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created parent Parent(id=615, userId=613, firstName=parent2FirstName, lastName=parent2LastName, emailAddress=parent2@email.com)
-2022-01-09 15:58:53.679  INFO 6561 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created child Child(id=616, firstName=parent2FirstName, lastName=parent2LastName, birthDate=2022-01-09 15:58:53.557, parent1Id=614, parent2Id=615)
-2022-01-09 15:58:53.761  WARN 6561 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
-2022-01-09 15:58:53.762 ERROR 6561 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'activity' for key 'activity.name'
-2022-01-09 15:58:53.822  INFO 6561 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 15:58:53.825  INFO 6561 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-09 15:58:53.836  INFO 6561 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-09 16:00:41.966  WARN 6703 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 16:00:41.977  INFO 6703 --- [main] c.s.c.controllers.ControllersTest        : Starting ControllersTest using Java 16.0.1 on sulyvan-N501VW with PID 6703 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 16:00:41.980  INFO 6703 --- [main] c.s.c.controllers.ControllersTest        : No active profile set, falling back to default profiles: default
-2022-01-09 16:00:42.666  INFO 6703 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 16:00:42.735  INFO 6703 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 6 JPA repository interfaces.
-2022-01-09 16:00:43.264  INFO 6703 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 16:00:43.303  INFO 6703 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2022-01-09 16:00:43.407  INFO 6703 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-09 16:00:43.495  INFO 6703 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-09 16:00:43.839  INFO 6703 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-09 16:00:43.862  INFO 6703 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 16:00:44.605  INFO 6703 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 16:00:44.613  INFO 6703 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:00:45.622  WARN 6703 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 16:00:46.219  INFO 6703 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-01-09 16:00:46.219  INFO 6703 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-01-09 16:00:46.221  INFO 6703 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2022-01-09 16:00:46.249  INFO 6703 --- [main] c.s.c.controllers.ControllersTest        : Started ControllersTest in 4.636 seconds (JVM running for 5.797)
-2022-01-09 16:00:46.642  INFO 6703 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:00:46.645  INFO 6703 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-09 16:00:46.653  INFO 6703 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-09 16:01:14.244  WARN 6808 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 16:01:14.255  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : Starting ControllersTest using Java 16.0.1 on sulyvan-N501VW with PID 6808 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 16:01:14.259  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : No active profile set, falling back to default profiles: default
-2022-01-09 16:01:14.930  INFO 6808 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 16:01:14.997  INFO 6808 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 6 JPA repository interfaces.
-2022-01-09 16:01:15.537  INFO 6808 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 16:01:15.577  INFO 6808 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2022-01-09 16:01:15.677  INFO 6808 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-09 16:01:15.764  INFO 6808 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-09 16:01:16.108  INFO 6808 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-09 16:01:16.138  INFO 6808 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 16:01:16.691  INFO 6808 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 16:01:16.698  INFO 6808 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:01:17.686  WARN 6808 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 16:01:18.188  INFO 6808 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-01-09 16:01:18.188  INFO 6808 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-01-09 16:01:18.189  INFO 6808 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2022-01-09 16:01:18.206  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : Started ControllersTest in 4.282 seconds (JVM running for 5.406)
-2022-01-09 16:01:18.659  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created user User(id=0, emailAddress=toto@email.com, login=toto, password=totoPassword)
-2022-01-09 16:01:18.743  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created parent Parent(id=619, userId=618, firstName=parent1FirstName, lastName=parent1LastName, emailAddress=parent1@email.com)
-2022-01-09 16:01:18.828  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created parent Parent(id=620, userId=618, firstName=parent2FirstName, lastName=parent2LastName, emailAddress=parent2@email.com)
-2022-01-09 16:01:18.936  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created child Child(id=621, firstName=parent2FirstName, lastName=parent2LastName, birthDate=2022-01-09 16:01:18.829, parent1Id=619, parent2Id=620)
-2022-01-09 16:01:19.000  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created activity Activity(id=622, name=activity)
-2022-01-09 16:01:19.081  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created activityTracking ActivityTracking(id=623, childId=621, activityId=622, activityTimestamp=2022-01-09 16:01:19.001, activityRemark=remark)
-2022-01-09 16:01:19.147  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created doctor Doctor(id=624, userId=618, name=doctor, emailAddress=doctor@email.com, phoneNr=phoneNr, city=city, street=street, streetNr=nr, zipCode=zipCode, country=country)
-2022-01-09 16:01:19.157  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete activityTracking ActivityTracking(id=623, childId=621, activityId=622, activityTimestamp=2022-01-09 16:01:19.001, activityRemark=remark)
-2022-01-09 16:01:19.201  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete activity Activity(id=622, name=activity)
-2022-01-09 16:01:19.223  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete child Child(id=621, firstName=parent2FirstName, lastName=parent2LastName, birthDate=2022-01-09 16:01:18.829, parent1Id=619, parent2Id=620)
-2022-01-09 16:01:19.249  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete parent Parent(id=619, userId=618, firstName=parent1FirstName, lastName=parent1LastName, emailAddress=parent1@email.com)
-2022-01-09 16:01:19.272  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete parent Parent(id=620, userId=618, firstName=parent2FirstName, lastName=parent2LastName, emailAddress=parent2@email.com)
-2022-01-09 16:01:19.301  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete doctor Doctor(id=624, userId=618, name=doctor, emailAddress=doctor@email.com, phoneNr=phoneNr, city=city, street=street, streetNr=nr, zipCode=zipCode, country=country)
-2022-01-09 16:01:19.334  INFO 6808 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete user User(id=618, emailAddress=toto@email.com, login=toto, password=totoPassword)
-2022-01-09 16:01:19.379  INFO 6808 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:01:19.382  INFO 6808 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-09 16:01:19.389  INFO 6808 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-09 16:03:20.206  WARN 6927 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 16:03:20.222  INFO 6927 --- [main] c.s.c.services.ServicesTest              : Starting ServicesTest using Java 16.0.1 on sulyvan-N501VW with PID 6927 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 16:03:20.226  INFO 6927 --- [main] c.s.c.services.ServicesTest              : No active profile set, falling back to default profiles: default
-2022-01-09 16:03:20.983  INFO 6927 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 16:03:21.055  INFO 6927 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 6 JPA repository interfaces.
-2022-01-09 16:03:21.612  INFO 6927 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 16:03:21.658  INFO 6927 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2022-01-09 16:03:21.773  INFO 6927 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-09 16:03:21.868  INFO 6927 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-09 16:03:22.192  INFO 6927 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-09 16:03:22.214  INFO 6927 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 16:03:22.908  INFO 6927 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 16:03:22.917  INFO 6927 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:03:23.879  WARN 6927 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 16:03:24.410  INFO 6927 --- [main] c.s.c.services.ServicesTest              : Started ServicesTest in 4.514 seconds (JVM running for 5.595)
-2022-01-09 16:03:24.714  INFO 6927 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:03:24.716  INFO 6927 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-09 16:03:24.723  INFO 6927 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-09 16:03:57.832  WARN 7020 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 16:03:57.849  INFO 7020 --- [main] c.s.c.services.ServicesTest              : Starting ServicesTest using Java 16.0.1 on sulyvan-N501VW with PID 7020 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 16:03:57.853  INFO 7020 --- [main] c.s.c.services.ServicesTest              : No active profile set, falling back to default profiles: default
-2022-01-09 16:03:58.603  INFO 7020 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 16:03:58.691  INFO 7020 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 6 JPA repository interfaces.
-2022-01-09 16:03:59.246  INFO 7020 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 16:03:59.286  INFO 7020 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2022-01-09 16:03:59.408  INFO 7020 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-09 16:03:59.508  INFO 7020 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-09 16:03:59.820  INFO 7020 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-09 16:03:59.841  INFO 7020 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 16:04:00.446  INFO 7020 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 16:04:00.454  INFO 7020 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:04:01.553  WARN 7020 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 16:04:02.088  INFO 7020 --- [main] c.s.c.services.ServicesTest              : Started ServicesTest in 4.624 seconds (JVM running for 5.654)
-2022-01-09 16:04:03.041  INFO 7020 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:04:03.044  INFO 7020 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-09 16:04:03.050  INFO 7020 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-09 16:04:13.786  WARN 7134 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 16:04:13.799  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : Starting ControllersTest using Java 16.0.1 on sulyvan-N501VW with PID 7134 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 16:04:13.802  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : No active profile set, falling back to default profiles: default
-2022-01-09 16:04:14.476  INFO 7134 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 16:04:14.579  INFO 7134 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 6 JPA repository interfaces.
-2022-01-09 16:04:15.123  INFO 7134 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 16:04:15.165  INFO 7134 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2022-01-09 16:04:15.266  INFO 7134 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-09 16:04:15.361  INFO 7134 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-09 16:04:15.685  INFO 7134 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-09 16:04:15.712  INFO 7134 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 16:04:16.333  INFO 7134 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 16:04:16.340  INFO 7134 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:04:17.361  WARN 7134 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 16:04:17.900  INFO 7134 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-01-09 16:04:17.900  INFO 7134 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-01-09 16:04:17.902  INFO 7134 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2022-01-09 16:04:17.926  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : Started ControllersTest in 4.475 seconds (JVM running for 5.463)
-2022-01-09 16:04:18.377  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created user User(id=0, emailAddress=toto@email.com, login=toto, password=totoPassword)
-2022-01-09 16:04:18.446  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created parent Parent(id=633, userId=632, firstName=parent1FirstName, lastName=parent1LastName, emailAddress=parent1@email.com)
-2022-01-09 16:04:18.500  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created parent Parent(id=634, userId=632, firstName=parent2FirstName, lastName=parent2LastName, emailAddress=parent2@email.com)
-2022-01-09 16:04:18.573  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created child Child(id=635, firstName=parent2FirstName, lastName=parent2LastName, birthDate=2022-01-09 16:04:18.501, parent1Id=633, parent2Id=634)
-2022-01-09 16:04:18.632  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created activity Activity(id=636, name=activity)
-2022-01-09 16:04:18.716  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created activityTracking ActivityTracking(id=637, childId=635, activityId=636, activityTimestamp=2022-01-09 16:04:18.632, activityRemark=remark)
-2022-01-09 16:04:18.813  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created doctor Doctor(id=638, userId=632, name=doctor, emailAddress=doctor@email.com, phoneNr=phoneNr, city=city, street=street, streetNr=nr, zipCode=zipCode, country=country)
-2022-01-09 16:04:18.822  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete activityTracking ActivityTracking(id=637, childId=635, activityId=636, activityTimestamp=2022-01-09 16:04:18.632, activityRemark=remark)
-2022-01-09 16:04:18.896  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete activity Activity(id=636, name=activity)
-2022-01-09 16:04:18.936  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete child Child(id=635, firstName=parent2FirstName, lastName=parent2LastName, birthDate=2022-01-09 16:04:18.501, parent1Id=633, parent2Id=634)
-2022-01-09 16:04:18.973  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete parent Parent(id=633, userId=632, firstName=parent1FirstName, lastName=parent1LastName, emailAddress=parent1@email.com)
-2022-01-09 16:04:19.002  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete parent Parent(id=634, userId=632, firstName=parent2FirstName, lastName=parent2LastName, emailAddress=parent2@email.com)
-2022-01-09 16:04:19.037  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete doctor Doctor(id=638, userId=632, name=doctor, emailAddress=doctor@email.com, phoneNr=phoneNr, city=city, street=street, streetNr=nr, zipCode=zipCode, country=country)
-2022-01-09 16:04:19.069  INFO 7134 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete user User(id=632, emailAddress=toto@email.com, login=toto, password=totoPassword)
-2022-01-09 16:04:19.124  INFO 7134 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.sulwep7.childactivitytracking.consumers.ConsumersTest], using SpringBootContextLoader
-2022-01-09 16:04:19.125  INFO 7134 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.sulwep7.childactivitytracking.consumers.ConsumersTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-01-09 16:04:19.125  INFO 7134 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.sulwep7.childactivitytracking.consumers.ConsumersTest]: ConsumersTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-01-09 16:04:19.130  INFO 7134 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.sulwep7.childactivitytracking.ChildActivityTrackingApplication for test class com.sulwep7.childactivitytracking.consumers.ConsumersTest
-2022-01-09 16:04:19.132  INFO 7134 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-01-09 16:04:19.133  INFO 7134 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5edce7da, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@f69e35a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6c2d124e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@602e7a9e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59f5a376, org.springframework.test.context.support.DirtiesContextTestExecutionListener@19c6e821, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1dfd3635, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@e14559e, org.springframework.test.context.event.EventPublishingTestExecutionListener@7a0eb939, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@54a7d1b9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@209f0986, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@c0b10ae, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3c3a767, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@698394bf, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@31887330]
-2022-01-09 16:04:19.164  WARN 7134 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 16:04:19.166  INFO 7134 --- [main] c.s.c.consumers.ConsumersTest            : Starting ConsumersTest using Java 16.0.1 on sulyvan-N501VW with PID 7134 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 16:04:19.167  INFO 7134 --- [main] c.s.c.consumers.ConsumersTest            : No active profile set, falling back to default profiles: default
-2022-01-09 16:04:19.328  INFO 7134 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 16:04:19.347  INFO 7134 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 6 JPA repository interfaces.
-2022-01-09 16:04:19.472  INFO 7134 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 16:04:19.476  INFO 7134 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2022-01-09 16:04:19.499  INFO 7134 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2022-01-09 16:04:19.500  INFO 7134 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 16:04:19.584  INFO 7134 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 16:04:19.584  INFO 7134 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:04:19.930  WARN 7134 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 16:04:20.155  INFO 7134 --- [main] c.s.c.consumers.ConsumersTest            : Started ConsumersTest in 1.02 seconds (JVM running for 7.692)
-2022-01-09 16:04:21.227  INFO 7134 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.sulwep7.childactivitytracking.services.ServicesTest], using SpringBootContextLoader
-2022-01-09 16:04:21.228  INFO 7134 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.sulwep7.childactivitytracking.services.ServicesTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-01-09 16:04:21.228  INFO 7134 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.sulwep7.childactivitytracking.services.ServicesTest]: ServicesTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-01-09 16:04:21.234  INFO 7134 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.sulwep7.childactivitytracking.ChildActivityTrackingApplication for test class com.sulwep7.childactivitytracking.services.ServicesTest
-2022-01-09 16:04:21.235  INFO 7134 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-01-09 16:04:21.236  INFO 7134 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@54af9cce, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@683218c8, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3eb6d7a9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@345f4e0d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1c3eeda4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@64b242b3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6cb1da13, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2250deae, org.springframework.test.context.event.EventPublishingTestExecutionListener@49e8548d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3fb920d9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5d3a147f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@79bb14d8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@72fc6b5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4353230, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@9214725]
-2022-01-09 16:04:21.264  WARN 7134 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 16:04:21.265  INFO 7134 --- [main] c.s.c.services.ServicesTest              : Starting ServicesTest using Java 16.0.1 on sulyvan-N501VW with PID 7134 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 16:04:21.267  INFO 7134 --- [main] c.s.c.services.ServicesTest              : No active profile set, falling back to default profiles: default
-2022-01-09 16:04:21.408  INFO 7134 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 16:04:21.420  INFO 7134 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 6 JPA repository interfaces.
-2022-01-09 16:04:21.523  INFO 7134 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 16:04:21.527  INFO 7134 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2022-01-09 16:04:21.542  INFO 7134 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2022-01-09 16:04:21.542  INFO 7134 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 16:04:21.622  INFO 7134 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 16:04:21.623  INFO 7134 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:04:21.945  WARN 7134 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 16:04:22.149  INFO 7134 --- [main] c.s.c.services.ServicesTest              : Started ServicesTest in 0.91 seconds (JVM running for 9.686)
-2022-01-09 16:04:22.761  INFO 7134 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:04:22.763  INFO 7134 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-09 16:04:22.768  INFO 7134 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-09 16:04:22.772  INFO 7134 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:04:22.773  INFO 7134 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2022-01-09 16:04:22.777  INFO 7134 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2022-01-09 16:04:22.781  INFO 7134 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:04:22.782  INFO 7134 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2022-01-09 16:04:22.785  INFO 7134 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2022-01-09 16:06:01.619  WARN 7835 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 16:06:01.635  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : Starting ControllersTest using Java 16.0.1 on sulyvan-N501VW with PID 7835 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 16:06:01.639  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : No active profile set, falling back to default profiles: default
-2022-01-09 16:06:02.309  INFO 7835 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 16:06:02.380  INFO 7835 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 6 JPA repository interfaces.
-2022-01-09 16:06:02.954  INFO 7835 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 16:06:03.007  INFO 7835 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2022-01-09 16:06:03.112  INFO 7835 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-09 16:06:03.205  INFO 7835 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-09 16:06:03.534  INFO 7835 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-09 16:06:03.560  INFO 7835 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 16:06:04.199  INFO 7835 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 16:06:04.210  INFO 7835 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:06:05.383  WARN 7835 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 16:06:06.087  INFO 7835 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-01-09 16:06:06.088  INFO 7835 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-01-09 16:06:06.089  INFO 7835 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2022-01-09 16:06:06.108  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : Started ControllersTest in 4.783 seconds (JVM running for 5.712)
-2022-01-09 16:06:06.592  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created user User(id=0, emailAddress=toto@email.com, login=toto, password=totoPassword)
-2022-01-09 16:06:06.673  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created parent Parent(id=654, userId=653, firstName=parent1FirstName, lastName=parent1LastName, emailAddress=parent1@email.com)
-2022-01-09 16:06:06.750  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created parent Parent(id=655, userId=653, firstName=parent2FirstName, lastName=parent2LastName, emailAddress=parent2@email.com)
-2022-01-09 16:06:06.850  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created child Child(id=656, firstName=parent2FirstName, lastName=parent2LastName, birthDate=2022-01-09 16:06:06.751, parent1Id=654, parent2Id=655)
-2022-01-09 16:06:06.914  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created activity Activity(id=657, name=activity)
-2022-01-09 16:06:06.984  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created activityTracking ActivityTracking(id=658, childId=656, activityId=657, activityTimestamp=2022-01-09 16:06:06.914, activityRemark=remark)
-2022-01-09 16:06:07.050  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : created doctor Doctor(id=659, userId=653, name=doctor, emailAddress=doctor@email.com, phoneNr=phoneNr, city=city, street=street, streetNr=nr, zipCode=zipCode, country=country)
-2022-01-09 16:06:07.059  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete activityTracking ActivityTracking(id=658, childId=656, activityId=657, activityTimestamp=2022-01-09 16:06:06.914, activityRemark=remark)
-2022-01-09 16:06:07.111  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete activity Activity(id=657, name=activity)
-2022-01-09 16:06:07.143  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete child Child(id=656, firstName=parent2FirstName, lastName=parent2LastName, birthDate=2022-01-09 16:06:06.751, parent1Id=654, parent2Id=655)
-2022-01-09 16:06:07.173  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete parent Parent(id=654, userId=653, firstName=parent1FirstName, lastName=parent1LastName, emailAddress=parent1@email.com)
-2022-01-09 16:06:07.200  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete parent Parent(id=655, userId=653, firstName=parent2FirstName, lastName=parent2LastName, emailAddress=parent2@email.com)
-2022-01-09 16:06:07.228  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete doctor Doctor(id=659, userId=653, name=doctor, emailAddress=doctor@email.com, phoneNr=phoneNr, city=city, street=street, streetNr=nr, zipCode=zipCode, country=country)
-2022-01-09 16:06:07.260  INFO 7835 --- [main] c.s.c.controllers.ControllersTest        : createThenDeleteUser : delete user User(id=653, emailAddress=toto@email.com, login=toto, password=totoPassword)
-2022-01-09 16:06:07.303  INFO 7835 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.sulwep7.childactivitytracking.consumers.ConsumersTest], using SpringBootContextLoader
-2022-01-09 16:06:07.304  INFO 7835 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.sulwep7.childactivitytracking.consumers.ConsumersTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-01-09 16:06:07.304  INFO 7835 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.sulwep7.childactivitytracking.consumers.ConsumersTest]: ConsumersTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-01-09 16:06:07.310  INFO 7835 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.sulwep7.childactivitytracking.ChildActivityTrackingApplication for test class com.sulwep7.childactivitytracking.consumers.ConsumersTest
-2022-01-09 16:06:07.313  INFO 7835 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-01-09 16:06:07.314  INFO 7835 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@c0b10ae, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3c3a767, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@698394bf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@31887330, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@65528bcf, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7bb4f09d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@ee7a538, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c045627, org.springframework.test.context.event.EventPublishingTestExecutionListener@d79a69b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@51158fb1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@62682ece, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3c83e9ca, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7c0ecdbf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@19bad88, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2226fd2b]
-2022-01-09 16:06:07.375  WARN 7835 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 16:06:07.377  INFO 7835 --- [main] c.s.c.consumers.ConsumersTest            : Starting ConsumersTest using Java 16.0.1 on sulyvan-N501VW with PID 7835 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 16:06:07.378  INFO 7835 --- [main] c.s.c.consumers.ConsumersTest            : No active profile set, falling back to default profiles: default
-2022-01-09 16:06:07.605  INFO 7835 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 16:06:07.620  INFO 7835 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 6 JPA repository interfaces.
-2022-01-09 16:06:07.763  INFO 7835 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 16:06:07.768  INFO 7835 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2022-01-09 16:06:07.786  INFO 7835 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2022-01-09 16:06:07.787  INFO 7835 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 16:06:07.882  INFO 7835 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 16:06:07.883  INFO 7835 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:06:08.282  WARN 7835 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 16:06:08.569  INFO 7835 --- [main] c.s.c.consumers.ConsumersTest            : Started ConsumersTest in 1.249 seconds (JVM running for 8.173)
-2022-01-09 16:06:09.614  INFO 7835 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.sulwep7.childactivitytracking.services.ServicesTest], using SpringBootContextLoader
-2022-01-09 16:06:09.615  INFO 7835 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.sulwep7.childactivitytracking.services.ServicesTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-01-09 16:06:09.615  INFO 7835 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.sulwep7.childactivitytracking.services.ServicesTest]: ServicesTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-01-09 16:06:09.621  INFO 7835 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.sulwep7.childactivitytracking.ChildActivityTrackingApplication for test class com.sulwep7.childactivitytracking.services.ServicesTest
-2022-01-09 16:06:09.623  INFO 7835 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-01-09 16:06:09.624  INFO 7835 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@79bb14d8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@72fc6b5e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4353230, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@9214725, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@289d9f0d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@39aaa7db, org.springframework.test.context.transaction.TransactionalTestExecutionListener@14a3a66c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1738d3b2, org.springframework.test.context.event.EventPublishingTestExecutionListener@539953af, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3fe1b278, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3678f32e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@678c0310, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7e113065, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4cd13fad, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3d41449a]
-2022-01-09 16:06:09.660  WARN 7835 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/home/sulyvan/WorkEnv/Maven/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2022-01-09 16:06:09.662  INFO 7835 --- [main] c.s.c.services.ServicesTest              : Starting ServicesTest using Java 16.0.1 on sulyvan-N501VW with PID 7835 (started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 16:06:09.663  INFO 7835 --- [main] c.s.c.services.ServicesTest              : No active profile set, falling back to default profiles: default
-2022-01-09 16:06:09.817  INFO 7835 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 16:06:09.834  INFO 7835 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces.
-2022-01-09 16:06:09.953  INFO 7835 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 16:06:09.957  INFO 7835 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2022-01-09 16:06:09.977  INFO 7835 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2022-01-09 16:06:09.977  INFO 7835 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 16:06:10.083  INFO 7835 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 16:06:10.084  INFO 7835 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:06:10.406  WARN 7835 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 16:06:10.608  INFO 7835 --- [main] c.s.c.services.ServicesTest              : Started ServicesTest in 0.981 seconds (JVM running for 10.212)
-2022-01-09 16:06:11.217  INFO 7835 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:06:11.219  INFO 7835 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-09 16:06:11.226  INFO 7835 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-09 16:06:11.229  INFO 7835 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:06:11.230  INFO 7835 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2022-01-09 16:06:11.234  INFO 7835 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2022-01-09 16:06:11.237  INFO 7835 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:06:11.239  INFO 7835 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2022-01-09 16:06:11.242  INFO 7835 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2022-01-09 16:21:22.830  INFO 9891 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 9891 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-09 16:21:22.833  INFO 9891 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
-2022-01-09 16:21:23.541  INFO 9891 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-09 16:21:23.609  INFO 9891 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 6 JPA repository interfaces.
-2022-01-09 16:21:24.229  INFO 9891 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
-2022-01-09 16:21:24.238  INFO 9891 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-09 16:21:24.238  INFO 9891 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2022-01-09 16:21:24.327  INFO 9891 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-09 16:21:24.328  INFO 9891 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1432 ms
-2022-01-09 16:21:24.517  INFO 9891 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-09 16:21:24.553  INFO 9891 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2022-01-09 16:21:24.640  INFO 9891 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-09 16:21:24.703  INFO 9891 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-09 16:21:24.990  INFO 9891 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-09 16:21:25.014  INFO 9891 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-09 16:21:25.593  INFO 9891 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-09 16:21:25.599  INFO 9891 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:21:26.320  WARN 9891 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-09 16:21:26.627  INFO 9891 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
-2022-01-09 16:21:26.637  INFO 9891 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 4.378 seconds (JVM running for 4.816)
-2022-01-09 16:21:34.138  INFO 9891 --- [http-nio-9443-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-09 16:21:34.138  INFO 9891 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-09 16:21:34.139  INFO 9891 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-01-09 16:23:38.042  INFO 9891 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-09 16:23:38.045  INFO 9891 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-09 16:23:38.051  INFO 9891 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-10 22:47:57.949  INFO 10981 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-10 22:47:57.951  INFO 10981 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-10 22:47:57.957  INFO 10981 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-10 22:48:36.297  INFO 11422 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 11422 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
+2022-01-10 22:48:36.300  INFO 11422 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
+2022-01-10 22:48:37.110  INFO 11422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-10 22:48:37.204  INFO 11422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 6 JPA repository interfaces.
+2022-01-10 22:48:37.880  INFO 11422 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
+2022-01-10 22:48:37.890  INFO 11422 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-10 22:48:37.891  INFO 11422 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-10 22:48:37.985  INFO 11422 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-10 22:48:37.986  INFO 11422 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1609 ms
+2022-01-10 22:48:38.172  INFO 11422 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-10 22:48:38.211  INFO 11422 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-01-10 22:48:38.316  INFO 11422 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-10 22:48:38.435  INFO 11422 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-10 22:48:38.761  INFO 11422 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-10 22:48:38.787  INFO 11422 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-10 22:48:39.490  INFO 11422 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-10 22:48:39.504  INFO 11422 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-10 22:48:40.415  WARN 11422 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-10 22:48:40.843  INFO 11422 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
+2022-01-10 22:48:40.856  INFO 11422 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 5.137 seconds (JVM running for 5.569)
+2022-01-10 22:48:48.494  INFO 11422 --- [http-nio-9443-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-10 22:48:48.495  INFO 11422 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-10 22:48:48.497  INFO 11422 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-01-10 22:53:49.380  WARN 11422 --- [http-nio-9443-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "null"]
+2022-01-10 22:54:26.940  WARN 11422 --- [http-nio-9443-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "null"]
+2022-01-10 22:57:11.742  WARN 11422 --- [http-nio-9443-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "null"]
+2022-01-10 22:57:52.543  WARN 11422 --- [http-nio-9443-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "null"]
+2022-01-10 22:59:19.263  WARN 11422 --- [http-nio-9443-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "null"]
