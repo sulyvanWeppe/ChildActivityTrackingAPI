@@ -4,7 +4,7 @@ create table child (
 	last_name varchar(50),
 	parent_1_id int,
 	parent_2_id int,
-	age int,
+	birth_date datetime(6),
 	foreign key(parent_1_id) references parent(id),
 	foreign key(parent_2_id) references parent(id)
 );

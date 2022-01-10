@@ -27,12 +27,15 @@ public interface ChildRepository extends CrudRepository<Child, Integer> {
 
     List<Child> findByBirthDate(Timestamp birthDate);
 
+    @Query("select c from Child c where parent_1_id=:parent1Id")
     List<Child> findByParent1Id(int parent1Id);
 
     @Query("select c from Child c where parent_2_id=:parent2Id")
     List<Child> findByParent2Id(int parent2Id);
 
-    @Query("select c from Child c where parent_1_id = :parent1Id and parent_2_id = :parent2Id")
+    @Query("select c from Child c \n" +
+            "where (parent_1_id = :parent1Id and parent_2_id = :parent2Id)\n" +
+            "or (parent_1_id = :parent2Id and parent_2_id = :parent1Id) ")
     List<Child> findByParentsId(int parent1Id, int parent2Id);
 
     @Transactional
