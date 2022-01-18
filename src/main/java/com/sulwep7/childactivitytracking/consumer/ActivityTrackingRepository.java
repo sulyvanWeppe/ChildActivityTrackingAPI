@@ -18,6 +18,7 @@ public interface ActivityTrackingRepository extends CrudRepository<ActivityTrack
 
     ActivityTracking findById(int id);
 
+    @Query("select at from ActivityTracking at where child_id=:childId")
     List<ActivityTracking> findByChildId(int childId);
 
     List<ActivityTracking> findByActivityId(int activityId);
