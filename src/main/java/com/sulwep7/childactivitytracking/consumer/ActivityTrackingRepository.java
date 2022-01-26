@@ -9,6 +9,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
+import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -22,6 +23,12 @@ public interface ActivityTrackingRepository extends CrudRepository<ActivityTrack
     List<ActivityTracking> findByChildId(int childId);
 
     List<ActivityTracking> findByActivityId(int activityId);
+
+    @Query("select at from ActivityTracking at where child_id=:childId and activity_id=:activityId")
+    List<ActivityTracking> findByChildIdActivityId(int childId, int activityId);
+
+    @Query("select at from ActivityTracking at where child_id=:childId and activity_id=:activityId and activity_timestamp>=:startDate and activity_timestamp<:endDate")
+    List<ActivityTracking> findByChildIdActivityIdDate(int childId, int activityId, Timestamp startDate, Timestamp endDate);
 
     @Transactional
     @Modifying

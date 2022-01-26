@@ -138,6 +138,7 @@ public class ControllersTest {
         //Activity
         Activity activity = Activity.builder()
                 .name("activity")
+                .measureLabel("measureLabel")
                 .build();
         String resActivityPost = null;
         Activity newActivity = null;

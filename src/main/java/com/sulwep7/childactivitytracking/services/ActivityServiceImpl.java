@@ -2,6 +2,7 @@ package com.sulwep7.childactivitytracking.services;
 
 import com.sulwep7.childactivitytracking.consumer.ActivityRepository;
 import com.sulwep7.childactivitytracking.model.Activity;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,7 @@ import java.security.InvalidParameterException;
 import java.util.List;
 
 @Service
+@Slf4j
 public class ActivityServiceImpl implements ActivityService {
 
     @Autowired
@@ -47,15 +49,18 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public Activity createActivity(String name) throws InvalidParameterException {
+    public Activity createActivity(String name, String measureLabel) throws InvalidParameterException {
         //Data quality checks
         boolean isValidName = !StringUtils.isBlank(name);
-        if (!isValidName) {
-            throw new InvalidParameterException("Input parameters of service createActivity are not valid :"+name);
+        boolean isValidMeasureLabel = !StringUtils.isBlank(measureLabel);
+        if (!isValidName || !isValidMeasureLabel) {
+            throw new InvalidParameterException("Input parameters of service createActivity are not valid :"+name+" and "+measureLabel);
         }
 
+        log.info("TOTO");
         Activity activity = Activity.builder()
                 .name(name)
+                .measureLabel(measureLabel)
                 .build();
         activity = activityRepository.save(activity);
 

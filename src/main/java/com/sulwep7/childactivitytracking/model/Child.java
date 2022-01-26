@@ -4,6 +4,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import javax.persistence.*;
@@ -19,9 +21,9 @@ public class Child {
     private String firstName;
     private String lastName;
     private Timestamp birthDate;
-    @Column(name = "PARENT_2_ID")
-    private int parent1Id;
     @Column(name = "PARENT_1_ID")
+    private int parent1Id;
+    @Column(name = "PARENT_2_ID")
     private int parent2Id;
 
     public Child() {}

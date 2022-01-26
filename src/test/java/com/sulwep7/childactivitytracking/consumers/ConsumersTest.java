@@ -80,6 +80,7 @@ public class ConsumersTest {
         //Activity
         Activity newActivity = Activity.builder()
                 .name("eating")
+                .measureLabel("meal")
                 .build();
         newActivity = activityRepository.save(newActivity);
         int newActivityId = newActivity.getId();

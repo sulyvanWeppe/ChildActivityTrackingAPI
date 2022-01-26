@@ -19,11 +19,13 @@ public class Activity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
+    private String measureLabel;
 
     public Activity() {};
 
-    public Activity(int id, String name) {
+    public Activity(int id, String name, String measureLabel) {
         this.id = id;
         this.name = name;
+        this.measureLabel = measureLabel;
     }
 }

@@ -3,6 +3,7 @@ package com.sulwep7.childactivitytracking.controllers;
 import com.sulwep7.childactivitytracking.model.ActivityTracking;
 import com.sulwep7.childactivitytracking.services.ActivityTrackingServiceImpl;
 import lombok.extern.slf4j.Slf4j;
+import org.hibernate.tool.schema.extract.spi.TableInformation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.rmi.NoSuchObjectException;
 import java.security.InvalidParameterException;
+import java.sql.Timestamp;
 import java.util.List;
 
 @RestController
@@ -52,6 +54,26 @@ public class ActivityTrackingController {
         try {
             log.info("Controller - GET - /activitytracking/childid/{}",childid);
             return activityTrackingService.getActivitiesTrackingByChildId(childid);
+        } catch (NoSuchObjectException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
+        }
+    }
+
+    @GetMapping(value="/activitytracking/childid/activityid/{childid}/{activityid}", produces="application/json")
+    public List<ActivityTracking> getActivitiesTrackingByChildActivity(@PathVariable int childid, @PathVariable int activityid) {
+        try {
+            log.info("Controller - GET - /activitytracking/childid/activityid/{}/{}",childid, activityid);
+            return activityTrackingService.getActivitiesTrackingByChildIdActivityId(childid, activityid);
+        } catch(NoSuchObjectException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
+        }
+    }
+
+    @GetMapping(value="/activitytracking/childid/activityid/date/{childId}/{activityId}/{date}", produces = "application/json")
+    public List<ActivityTracking> getActivitiesTrackingByChildActivityDate(@PathVariable int childId, @PathVariable int activityId, @PathVariable Timestamp date) {
+        try {
+            log.info("Controller - GET - /activitytracking/childid/activityid/date/{}/{}/{}",childId, activityId, date);
+            return activityTrackingService.getActivitiesTrackingByChildIdActivityIdDate(childId, activityId, date);
         } catch (NoSuchObjectException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
         }

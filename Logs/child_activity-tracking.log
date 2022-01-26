@@ -1,81 +1,20 @@
-2022-01-18 13:35:56.034  INFO 5941 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 5941 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-18 13:35:56.041  INFO 5941 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
-2022-01-18 13:35:56.849  INFO 5941 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-18 13:35:56.935  INFO 5941 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 6 JPA repository interfaces.
-2022-01-18 13:35:57.538  INFO 5941 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
-2022-01-18 13:35:57.548  INFO 5941 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-18 13:35:57.549  INFO 5941 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-01-18 13:35:57.642  INFO 5941 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-18 13:35:57.642  INFO 5941 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1526 ms
-2022-01-18 13:35:57.858  INFO 5941 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-18 13:35:57.906  INFO 5941 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
-2022-01-18 13:35:58.074  INFO 5941 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-18 13:35:58.148  INFO 5941 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-18 13:35:58.542  INFO 5941 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-18 13:35:58.573  INFO 5941 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-18 13:35:59.220  INFO 5941 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-18 13:35:59.227  INFO 5941 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-18 13:36:00.107  WARN 5941 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-18 13:36:00.435  INFO 5941 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
-2022-01-18 13:36:00.444  INFO 5941 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 4.95 seconds (JVM running for 5.504)
-2022-01-18 13:43:04.801  INFO 5941 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-18 13:43:04.804  INFO 5941 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-18 13:43:04.809  INFO 5941 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-18 13:43:08.835  INFO 6432 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 6432 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-18 13:43:08.838  INFO 6432 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
-2022-01-18 13:43:09.619  INFO 6432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-18 13:43:09.687  INFO 6432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 6 JPA repository interfaces.
-2022-01-18 13:43:10.319  INFO 6432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
-2022-01-18 13:43:10.331  INFO 6432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-18 13:43:10.331  INFO 6432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-01-18 13:43:10.432  INFO 6432 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-18 13:43:10.433  INFO 6432 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1528 ms
-2022-01-18 13:43:10.657  INFO 6432 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-18 13:43:10.710  INFO 6432 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
-2022-01-18 13:43:10.842  INFO 6432 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-18 13:43:10.930  INFO 6432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-18 13:43:11.263  INFO 6432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-18 13:43:11.286  INFO 6432 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-18 13:43:11.834  INFO 6432 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-18 13:43:11.840  INFO 6432 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-18 13:43:12.578  WARN 6432 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-18 13:43:12.903  INFO 6432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
-2022-01-18 13:43:12.912  INFO 6432 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 4.65 seconds (JVM running for 5.109)
-2022-01-18 13:43:18.091  INFO 6432 --- [http-nio-9443-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-18 13:43:18.091  INFO 6432 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-18 13:43:18.093  INFO 6432 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-01-18 13:43:18.141  INFO 6432 --- [http-nio-9443-exec-1] c.s.c.controllers.UserController         : Controller - GET - /user/1
-2022-01-18 13:57:07.064  INFO 6432 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-18 13:57:07.066  INFO 6432 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-18 13:57:07.073  INFO 6432 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-18 13:57:10.988  INFO 6770 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 6770 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-18 13:57:10.991  INFO 6770 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
-2022-01-18 13:57:11.810  INFO 6770 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-18 13:57:11.875  INFO 6770 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 6 JPA repository interfaces.
-2022-01-18 13:57:12.563  INFO 6770 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
-2022-01-18 13:57:12.575  INFO 6770 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-18 13:57:12.575  INFO 6770 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-01-18 13:57:12.684  INFO 6770 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-18 13:57:12.684  INFO 6770 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1627 ms
-2022-01-18 13:57:12.874  INFO 6770 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-18 13:57:12.914  INFO 6770 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
-2022-01-18 13:57:13.039  INFO 6770 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-18 13:57:13.115  INFO 6770 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-18 13:57:13.442  INFO 6770 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-18 13:57:13.465  INFO 6770 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-18 13:57:14.030  INFO 6770 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-18 13:57:14.036  INFO 6770 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-18 13:57:14.817  WARN 6770 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-18 13:57:15.145  INFO 6770 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
-2022-01-18 13:57:15.153  INFO 6770 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 4.682 seconds (JVM running for 5.117)
-2022-01-18 13:57:26.480  INFO 6770 --- [http-nio-9443-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-18 13:57:26.480  INFO 6770 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-18 13:57:26.481  INFO 6770 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-01-18 13:57:26.532  INFO 6770 --- [http-nio-9443-exec-1] c.s.c.controllers.UserController         : Controller - GET - /user/1
-2022-01-18 13:57:26.704  INFO 6770 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
-2022-01-18 13:57:26.705  INFO 6770 --- [http-nio-9443-exec-3] c.s.c.controllers.DoctorController       : Controller - GET - /doctor/userid/1
-2022-01-18 13:57:26.779  INFO 6770 --- [http-nio-9443-exec-4] c.s.c.controllers.DoctorController       : Controller - GET - /doctor/{id}
-2022-01-18 13:57:26.782  INFO 6770 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
-2022-01-18 13:57:44.365  INFO 6770 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-18 13:57:44.367  INFO 6770 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-18 13:57:44.375  INFO 6770 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-26 08:36:06.762  INFO 4992 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 4992 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
+2022-01-26 08:36:06.767  INFO 4992 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
+2022-01-26 08:36:07.704  INFO 4992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-26 08:36:07.791  INFO 4992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 6 JPA repository interfaces.
+2022-01-26 08:36:08.430  INFO 4992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
+2022-01-26 08:36:08.441  INFO 4992 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-26 08:36:08.442  INFO 4992 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-26 08:36:08.527  INFO 4992 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-26 08:36:08.527  INFO 4992 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1697 ms
+2022-01-26 08:36:08.759  INFO 4992 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-26 08:36:08.822  INFO 4992 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-26 08:36:09.031  INFO 4992 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-26 08:36:09.110  INFO 4992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-26 08:36:09.465  INFO 4992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-26 08:36:09.490  INFO 4992 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-26 08:36:10.052  INFO 4992 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-26 08:36:10.059  INFO 4992 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-26 08:36:10.877  WARN 4992 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-26 08:36:11.220  INFO 4992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
+2022-01-26 08:36:11.230  INFO 4992 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 5.014 seconds (JVM running for 5.584)

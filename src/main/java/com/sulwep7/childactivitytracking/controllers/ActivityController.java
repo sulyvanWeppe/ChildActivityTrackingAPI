@@ -42,7 +42,7 @@ public class ActivityController {
         Activity newActivity = null;
         try {
             log.info("Controller - POST - /activity with input activity {}",activity);
-            newActivity = activityService.createActivity(activity.getName());
+            newActivity = activityService.createActivity(activity.getName(),activity.getMeasureLabel());
         } catch (InvalidParameterException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
         }
