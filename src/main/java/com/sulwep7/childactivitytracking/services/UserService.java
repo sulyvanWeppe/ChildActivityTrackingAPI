@@ -16,6 +16,8 @@ public interface UserService {
 
     public User getUserByLogin(String login) throws NoSuchObjectException;
 
+    public User getUserByLoginPwd(String login, String password) throws NoSuchObjectException;
+
     public List<User> getUsers();
 
     public void deleteUserById(int id);

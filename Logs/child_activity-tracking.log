@@ -1,20 +1,135 @@
-2022-01-26 08:36:06.762  INFO 4992 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 4992 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-26 08:36:06.767  INFO 4992 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
-2022-01-26 08:36:07.704  INFO 4992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-26 08:36:07.791  INFO 4992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 6 JPA repository interfaces.
-2022-01-26 08:36:08.430  INFO 4992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
-2022-01-26 08:36:08.441  INFO 4992 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-26 08:36:08.442  INFO 4992 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-01-26 08:36:08.527  INFO 4992 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-26 08:36:08.527  INFO 4992 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1697 ms
-2022-01-26 08:36:08.759  INFO 4992 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-26 08:36:08.822  INFO 4992 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
-2022-01-26 08:36:09.031  INFO 4992 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-26 08:36:09.110  INFO 4992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-26 08:36:09.465  INFO 4992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-26 08:36:09.490  INFO 4992 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-26 08:36:10.052  INFO 4992 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-26 08:36:10.059  INFO 4992 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-26 08:36:10.877  WARN 4992 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-26 08:36:11.220  INFO 4992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
-2022-01-26 08:36:11.230  INFO 4992 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 5.014 seconds (JVM running for 5.584)
+2022-01-29 13:08:09.608  INFO 5021 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 5021 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
+2022-01-29 13:08:09.623  INFO 5021 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
+2022-01-29 13:08:10.616  INFO 5021 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-29 13:08:10.695  INFO 5021 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 6 JPA repository interfaces.
+2022-01-29 13:08:11.529  INFO 5021 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
+2022-01-29 13:08:11.543  INFO 5021 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-29 13:08:11.544  INFO 5021 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-29 13:08:11.673  INFO 5021 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-29 13:08:11.674  INFO 5021 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1942 ms
+2022-01-29 13:08:11.979  INFO 5021 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-29 13:08:12.064  INFO 5021 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-29 13:08:12.328  INFO 5021 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-29 13:08:12.454  INFO 5021 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-29 13:08:12.834  INFO 5021 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-29 13:08:12.869  INFO 5021 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-29 13:08:13.629  INFO 5021 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-29 13:08:13.640  INFO 5021 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-29 13:08:14.544  WARN 5021 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-29 13:08:14.946  INFO 5021 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
+2022-01-29 13:08:14.958  INFO 5021 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 6.027 seconds (JVM running for 6.61)
+2022-01-29 13:08:22.246  INFO 5021 --- [http-nio-9443-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-29 13:08:22.246  INFO 5021 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-29 13:08:22.247  INFO 5021 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-29 13:08:22.297  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 13:08:22.574  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:08:22.611  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:13:35.181  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 13:13:35.323  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:13:35.344  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:14:28.796  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 13:14:28.963  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:14:28.976  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:16:11.023  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 13:16:11.187  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:16:11.204  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:20:54.649  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 13:20:54.810  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:20:54.826  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:30:21.640  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 13:30:21.800  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:30:21.818  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:36:49.268  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 13:36:49.464  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:36:49.486  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:43:24.218  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:43:24.238  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:43:25.734  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.controllers.DoctorController       : Controller - GET - /doctor/userid/29
+2022-01-29 13:43:26.500  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:43:26.519  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:43:27.992  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.controllers.DoctorController       : Controller - GET - /doctor/userid/29
+2022-01-29 13:43:28.535  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:43:28.547  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:43:29.508  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.DoctorController       : Controller - GET - /doctor/userid/29
+2022-01-29 13:43:30.370  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:43:30.395  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:43:32.654  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:43:32.667  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:43:35.171  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:43:35.181  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:43:36.224  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.controllers.DoctorController       : Controller - GET - /doctor/userid/29
+2022-01-29 13:43:40.824  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:43:40.835  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:52:41.870  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 13:52:44.195  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:52:44.213  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:55:20.258  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 13:55:22.963  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:55:22.980  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:55:39.014  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 13:55:41.655  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:55:41.677  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:57:03.911  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 13:57:05.879  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:57:05.898  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 13:59:03.270  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 13:59:03.407  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 13:59:03.431  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 14:01:24.279  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 14:01:24.419  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 14:01:24.435  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 14:01:36.892  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 14:01:36.982  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 14:01:36.995  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 14:01:59.795  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.DoctorController       : Controller - GET - /doctor/userid/29
+2022-01-29 14:02:05.319  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.UserController         : Controller - PUT - /user with input user User(id=29, emailAddress=camille@email.com, login=Camille, password=camille)
+2022-01-29 14:02:13.213  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 14:02:13.224  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 14:02:18.634  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 14:02:18.643  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 14:02:18.673  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-29 14:02:18.692  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/39/1/2022-01-29 00:00:00.0
+2022-01-29 14:02:18.721  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/39/2/2022-01-29 00:00:00.0
+2022-01-29 14:02:18.730  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/39/3/2022-01-29 00:00:00.0
+2022-01-29 14:02:18.738  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/39/4/2022-01-29 00:00:00.0
+2022-01-29 14:15:46.217  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 14:15:46.418  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 14:15:46.441  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 14:20:39.010  INFO 5021 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-29 14:20:39.014  INFO 5021 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-29 14:20:39.019  INFO 5021 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-29 14:20:42.617  INFO 10033 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 10033 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
+2022-01-29 14:20:42.619  INFO 10033 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
+2022-01-29 14:20:43.923  INFO 10033 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-29 14:20:44.016  INFO 10033 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 6 JPA repository interfaces.
+2022-01-29 14:20:44.788  INFO 10033 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
+2022-01-29 14:20:44.803  INFO 10033 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-29 14:20:44.804  INFO 10033 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-29 14:20:44.962  INFO 10033 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-29 14:20:44.963  INFO 10033 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2272 ms
+2022-01-29 14:20:45.336  INFO 10033 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-29 14:20:45.386  INFO 10033 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-29 14:20:45.617  INFO 10033 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-29 14:20:45.760  INFO 10033 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-29 14:20:46.316  INFO 10033 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-29 14:20:46.359  INFO 10033 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-29 14:20:47.149  INFO 10033 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-29 14:20:47.159  INFO 10033 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-29 14:20:48.197  WARN 10033 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-29 14:20:48.645  INFO 10033 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
+2022-01-29 14:20:48.667  INFO 10033 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 6.582 seconds (JVM running for 7.119)
+2022-01-29 14:20:56.849  INFO 10033 --- [http-nio-9443-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-29 14:20:56.850  INFO 10033 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-29 14:20:56.851  INFO 10033 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-29 14:20:56.908  INFO 10033 --- [http-nio-9443-exec-1] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 14:20:57.146  INFO 10033 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 14:20:57.194  INFO 10033 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 14:41:56.984  INFO 10033 --- [http-nio-9443-exec-5] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 14:41:57.143  INFO 10033 --- [http-nio-9443-exec-6] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 14:41:57.160  INFO 10033 --- [http-nio-9443-exec-7] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 14:42:10.551  INFO 10033 --- [http-nio-9443-exec-8] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
+2022-01-29 14:42:10.684  INFO 10033 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
+2022-01-29 14:42:10.705  INFO 10033 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
+2022-01-29 14:45:27.815  INFO 10033 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-29 14:45:27.817  INFO 10033 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-29 14:45:27.824  INFO 10033 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

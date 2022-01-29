@@ -106,6 +106,7 @@ public class ParentController {
             if (newParent != null) {
                 parentService.deleteParentById(newParent.getId());
             }
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
         }
 
         return newParent;

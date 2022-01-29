@@ -80,6 +80,16 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    public User getUserByLoginPwd(String login, String password) throws NoSuchObjectException {
+        User user = userRepository.findByLoginPwd(login, password);
+        if(ObjectUtils.isEmpty(user)) {
+            throw new NoSuchObjectException("No user found with login : "+login+" and the given password");
+        }
+
+        return user;
+    }
+
+    @Override
     public List<User> getUsers() {
         List<User> users = userRepository.findAll();
 

@@ -52,6 +52,15 @@ public class UserController {
         }
     }
 
+    @GetMapping(value="/user/login/password/{login}/{password}", produces = "application/json")
+    public User getUserByEmail(@PathVariable String login, @PathVariable String password) {
+        try {
+            log.info("Controller - GET - /user/login/password/{}/{}",login, password);
+            return userService.getUserByLoginPwd(login, password);
+        } catch (NoSuchObjectException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
+        }
+    }
     @GetMapping(value="/user", produces = "application/json")
     public List<User> getUsers() {
         log.info("Controller - GET - /user");
