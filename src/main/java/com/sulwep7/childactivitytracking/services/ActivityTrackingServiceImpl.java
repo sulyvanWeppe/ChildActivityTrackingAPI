@@ -4,6 +4,7 @@ import com.sulwep7.childactivitytracking.consumer.ActivityRepository;
 import com.sulwep7.childactivitytracking.consumer.ActivityTrackingRepository;
 import com.sulwep7.childactivitytracking.consumer.ChildRepository;
 import com.sulwep7.childactivitytracking.model.ActivityTracking;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,11 @@ import org.springframework.util.ObjectUtils;
 import java.rmi.NoSuchObjectException;
 import java.security.InvalidParameterException;
 import java.sql.Timestamp;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.temporal.TemporalAccessor;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -58,6 +64,32 @@ public class ActivityTrackingServiceImpl implements ActivityTrackingService{
         List<ActivityTracking> activityTrackings = activityTrackingRepository.findByActivityId(activityId);
         if(ObjectUtils.isEmpty(activityTrackings)) {
             throw new NoSuchObjectException("No activityTracking found with activityId : "+activityId);
+        }
+
+        return activityTrackings;
+    }
+
+    @Override
+    public List<ActivityTracking> getActivitiesTrackingByChildIdActivityId(int childId, int activityId) throws NoSuchObjectException {
+        List<ActivityTracking> activityTrackings = activityTrackingRepository.findByChildIdActivityId(childId, activityId);
+        if (ObjectUtils.isEmpty(activityTrackings)) {
+            throw new NoSuchObjectException("No activityTracking found with childId : "+childId+" and activityId : "+activityId);
+        }
+
+        return activityTrackings;
+    }
+
+    @Override
+    public List<ActivityTracking> getActivitiesTrackingByChildIdActivityIdDate(int childId, int activityId, Timestamp date) throws NoSuchObjectException {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.DAY_OF_WEEK,1);
+        Timestamp endDate = new Timestamp(calendar.getTime().getTime());
+
+        List<ActivityTracking> activityTrackings = activityTrackingRepository.findByChildIdActivityIdDate(childId, activityId, date, endDate);
+
+        if (ObjectUtils.isEmpty(activityTrackings)) {
+            throw new NoSuchObjectException("No activityTracking found with childId : "+childId+", activityId : "+activityId+" and date : "+date);
         }
 
         return activityTrackings;

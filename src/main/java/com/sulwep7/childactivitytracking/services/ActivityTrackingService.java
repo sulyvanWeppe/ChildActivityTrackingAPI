@@ -17,6 +17,10 @@ public interface ActivityTrackingService {
 
     public List<ActivityTracking> getActivitiesTrackingByActivityId(int activityId) throws NoSuchObjectException;
 
+    public List<ActivityTracking> getActivitiesTrackingByChildIdActivityId(int childId, int activityId) throws NoSuchObjectException;
+
+    public List<ActivityTracking> getActivitiesTrackingByChildIdActivityIdDate(int childId, int activityId, Timestamp date) throws NoSuchObjectException;
+
     public ActivityTracking createActivityTracking(int childId, int activityId, Timestamp timestamp, String remark) throws InvalidParameterException;
 
     public void deleteActivityTrackingById(int id);

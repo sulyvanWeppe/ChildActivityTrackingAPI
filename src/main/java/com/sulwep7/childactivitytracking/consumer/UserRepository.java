@@ -18,6 +18,9 @@ public interface UserRepository extends CrudRepository<User, Integer> {
 
     User findByLogin(String login);
 
+    @Query("select u from User u where login=:userLogin and password=:userPwd")
+    User findByLoginPwd(String userLogin, String userPwd);
+
     @Transactional
     @Modifying
     @Query("delete from User u where login=:login")

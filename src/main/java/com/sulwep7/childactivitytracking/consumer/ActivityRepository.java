@@ -12,6 +12,7 @@ import java.util.List;
 
 public interface ActivityRepository extends CrudRepository<Activity, Integer> {
 
+    @Query("select a from Activity a order by a.id")
     List<Activity> findAll();
 
     Activity findById(int id);

@@ -3,6 +3,7 @@ package com.sulwep7.childactivitytracking.controllers;
 import com.sulwep7.childactivitytracking.model.User;
 import com.sulwep7.childactivitytracking.model.exceptions.AlreadyUsedUserLogin;
 import com.sulwep7.childactivitytracking.services.UserServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import java.rmi.NoSuchObjectException;
 import java.security.InvalidParameterException;
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/")
 public class UserController {
@@ -23,6 +25,7 @@ public class UserController {
     @GetMapping(value = "/user/{id}", produces = "application/json")
     public User getById(@PathVariable int id) {
         try {
+            log.info("Controller - GET - /user/{}",id);
             return userService.getUserById(id);
         } catch (NoSuchObjectException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
@@ -32,6 +35,7 @@ public class UserController {
     @GetMapping(value="/user/login/{login}", produces="application/json")
     public User getByLogin(@PathVariable String login) {
         try {
+            log.info("Controller - GET - /user/login/{}",login);
             return userService.getUserByLogin(login);
         } catch (NoSuchObjectException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
@@ -41,14 +45,25 @@ public class UserController {
     @GetMapping(value="/user/email/{email}", produces = "application/json")
     public User getUserByEmail(@PathVariable String email) {
         try {
+            log.info("Controller - GET - /user/email/{}",email);
             return userService.getUserByEmailAddress(email);
         } catch (NoSuchObjectException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
         }
     }
 
+    @GetMapping(value="/user/login/password/{login}/{password}", produces = "application/json")
+    public User getUserByEmail(@PathVariable String login, @PathVariable String password) {
+        try {
+            log.info("Controller - GET - /user/login/password/{}/{}",login, password);
+            return userService.getUserByLoginPwd(login, password);
+        } catch (NoSuchObjectException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
+        }
+    }
     @GetMapping(value="/user", produces = "application/json")
     public List<User> getUsers() {
+        log.info("Controller - GET - /user");
         return userService.getUsers();
     }
 
@@ -56,6 +71,7 @@ public class UserController {
     public User createUser(@RequestBody User user) {
         User newUser = null;
         try {
+            log.info("Controller - POST - /user with input user {}", user);
             newUser =  userService.createUser(user.getEmailAddress(), user.getLogin(), user.getPassword());
             return newUser;
         } catch (AlreadyUsedUserLogin e) {
@@ -75,6 +91,7 @@ public class UserController {
     @DeleteMapping(value="/user/{id}", produces = "application/json")
     public ResponseEntity deleteUserById(@PathVariable int id) {
         try {
+            log.info("Controller - DELETE - /user/{}",id);
             userService.deleteUserById(id);
         } catch (Exception e) {
             e.printStackTrace();
@@ -87,6 +104,7 @@ public class UserController {
     public ResponseEntity deleteUserByLogin(@PathVariable String login)
     {
         try {
+            log.info("Controller - DELETE - /user/login/{}",login);
             userService.deleteUserByLogin(login);
         } catch(Exception e) {
             e.printStackTrace();
@@ -99,6 +117,7 @@ public class UserController {
     @DeleteMapping(value="/user/email/{email}", produces="application/json")
     public ResponseEntity deleteUserByEmail(@PathVariable String email) {
         try {
+            log.info("Controller - DELETE - /user/email/{}",email);
             userService.deleteUserByEmail(email);
         } catch (Exception e) {
             e.printStackTrace();
@@ -111,6 +130,7 @@ public class UserController {
     @PutMapping(value = "/user", produces = "application/json")
     public User updateUser(@RequestBody User user){
         try {
+            log.info("Controller - PUT - /user with input user {}",user);
             userService.updateUser(user);
             return userService.getUserById(user.getId());
         } catch (NoSuchObjectException e) {

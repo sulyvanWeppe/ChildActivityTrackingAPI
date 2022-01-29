@@ -90,9 +90,10 @@ public class ServicesTest {
 
         //Activity
         String activityName = "activityName";
+        String activityMeasureLabel = "activityMeasureLabel";
         Activity activity = null;
         try {
-            activity = activityService.createActivity(activityName);
+            activity = activityService.createActivity(activityName,activityMeasureLabel);
             Assertions.assertTrue(!ObjectUtils.isEmpty(activity));
         }catch (InvalidParameterException e) {
             Assertions.assertTrue(!ObjectUtils.isEmpty(activity));

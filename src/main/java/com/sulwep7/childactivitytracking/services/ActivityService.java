@@ -14,7 +14,7 @@ public interface ActivityService {
 
     public Activity getActivityByName(String name) throws NoSuchObjectException;
 
-    public Activity createActivity(String name) throws InvalidParameterException;
+    public Activity createActivity(String name, String measureLabel) throws InvalidParameterException;
 
     public void deleteActivityById(int id);
 
