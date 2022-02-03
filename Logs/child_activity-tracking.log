@@ -1,135 +1,320 @@
-2022-01-29 13:08:09.608  INFO 5021 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 5021 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-29 13:08:09.623  INFO 5021 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
-2022-01-29 13:08:10.616  INFO 5021 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-29 13:08:10.695  INFO 5021 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 6 JPA repository interfaces.
-2022-01-29 13:08:11.529  INFO 5021 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
-2022-01-29 13:08:11.543  INFO 5021 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-29 13:08:11.544  INFO 5021 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-01-29 13:08:11.673  INFO 5021 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-29 13:08:11.674  INFO 5021 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1942 ms
-2022-01-29 13:08:11.979  INFO 5021 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-29 13:08:12.064  INFO 5021 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
-2022-01-29 13:08:12.328  INFO 5021 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-29 13:08:12.454  INFO 5021 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-29 13:08:12.834  INFO 5021 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-29 13:08:12.869  INFO 5021 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-29 13:08:13.629  INFO 5021 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-29 13:08:13.640  INFO 5021 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-29 13:08:14.544  WARN 5021 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-29 13:08:14.946  INFO 5021 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
-2022-01-29 13:08:14.958  INFO 5021 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 6.027 seconds (JVM running for 6.61)
-2022-01-29 13:08:22.246  INFO 5021 --- [http-nio-9443-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-29 13:08:22.246  INFO 5021 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-29 13:08:22.247  INFO 5021 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-01-29 13:08:22.297  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 13:08:22.574  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:08:22.611  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:13:35.181  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 13:13:35.323  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:13:35.344  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:14:28.796  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 13:14:28.963  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:14:28.976  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:16:11.023  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 13:16:11.187  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:16:11.204  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:20:54.649  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 13:20:54.810  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:20:54.826  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:30:21.640  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 13:30:21.800  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:30:21.818  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:36:49.268  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 13:36:49.464  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:36:49.486  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:43:24.218  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:43:24.238  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:43:25.734  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.controllers.DoctorController       : Controller - GET - /doctor/userid/29
-2022-01-29 13:43:26.500  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:43:26.519  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:43:27.992  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.controllers.DoctorController       : Controller - GET - /doctor/userid/29
-2022-01-29 13:43:28.535  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:43:28.547  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:43:29.508  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.DoctorController       : Controller - GET - /doctor/userid/29
-2022-01-29 13:43:30.370  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:43:30.395  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:43:32.654  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:43:32.667  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:43:35.171  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:43:35.181  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:43:36.224  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.controllers.DoctorController       : Controller - GET - /doctor/userid/29
-2022-01-29 13:43:40.824  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:43:40.835  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:52:41.870  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 13:52:44.195  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:52:44.213  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:55:20.258  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 13:55:22.963  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:55:22.980  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:55:39.014  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 13:55:41.655  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:55:41.677  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:57:03.911  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 13:57:05.879  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:57:05.898  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 13:59:03.270  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 13:59:03.407  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 13:59:03.431  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 14:01:24.279  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 14:01:24.419  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 14:01:24.435  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 14:01:36.892  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 14:01:36.982  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 14:01:36.995  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 14:01:59.795  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.controllers.DoctorController       : Controller - GET - /doctor/userid/29
-2022-01-29 14:02:05.319  INFO 5021 --- [http-nio-9443-exec-4] c.s.c.controllers.UserController         : Controller - PUT - /user with input user User(id=29, emailAddress=camille@email.com, login=Camille, password=camille)
-2022-01-29 14:02:13.213  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 14:02:13.224  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 14:02:18.634  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 14:02:18.643  INFO 5021 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 14:02:18.673  INFO 5021 --- [http-nio-9443-exec-9] c.s.c.controllers.ActivityController     : Controller - GET - /activity
-2022-01-29 14:02:18.692  INFO 5021 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/39/1/2022-01-29 00:00:00.0
-2022-01-29 14:02:18.721  INFO 5021 --- [http-nio-9443-exec-1] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/39/2/2022-01-29 00:00:00.0
-2022-01-29 14:02:18.730  INFO 5021 --- [http-nio-9443-exec-2] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/39/3/2022-01-29 00:00:00.0
-2022-01-29 14:02:18.738  INFO 5021 --- [http-nio-9443-exec-3] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/39/4/2022-01-29 00:00:00.0
-2022-01-29 14:15:46.217  INFO 5021 --- [http-nio-9443-exec-5] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 14:15:46.418  INFO 5021 --- [http-nio-9443-exec-6] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 14:15:46.441  INFO 5021 --- [http-nio-9443-exec-7] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 14:20:39.010  INFO 5021 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-29 14:20:39.014  INFO 5021 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-29 14:20:39.019  INFO 5021 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-29 14:20:42.617  INFO 10033 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 10033 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
-2022-01-29 14:20:42.619  INFO 10033 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
-2022-01-29 14:20:43.923  INFO 10033 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-01-29 14:20:44.016  INFO 10033 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 6 JPA repository interfaces.
-2022-01-29 14:20:44.788  INFO 10033 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
-2022-01-29 14:20:44.803  INFO 10033 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-29 14:20:44.804  INFO 10033 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-01-29 14:20:44.962  INFO 10033 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-29 14:20:44.963  INFO 10033 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2272 ms
-2022-01-29 14:20:45.336  INFO 10033 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-01-29 14:20:45.386  INFO 10033 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
-2022-01-29 14:20:45.617  INFO 10033 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-01-29 14:20:45.760  INFO 10033 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-29 14:20:46.316  INFO 10033 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-29 14:20:46.359  INFO 10033 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-01-29 14:20:47.149  INFO 10033 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-01-29 14:20:47.159  INFO 10033 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-01-29 14:20:48.197  WARN 10033 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-01-29 14:20:48.645  INFO 10033 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
-2022-01-29 14:20:48.667  INFO 10033 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 6.582 seconds (JVM running for 7.119)
-2022-01-29 14:20:56.849  INFO 10033 --- [http-nio-9443-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-29 14:20:56.850  INFO 10033 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-29 14:20:56.851  INFO 10033 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-01-29 14:20:56.908  INFO 10033 --- [http-nio-9443-exec-1] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 14:20:57.146  INFO 10033 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 14:20:57.194  INFO 10033 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 14:41:56.984  INFO 10033 --- [http-nio-9443-exec-5] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 14:41:57.143  INFO 10033 --- [http-nio-9443-exec-6] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 14:41:57.160  INFO 10033 --- [http-nio-9443-exec-7] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 14:42:10.551  INFO 10033 --- [http-nio-9443-exec-8] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/camille/camille
-2022-01-29 14:42:10.684  INFO 10033 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid29
-2022-01-29 14:42:10.705  INFO 10033 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/37/38
-2022-01-29 14:45:27.815  INFO 10033 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-01-29 14:45:27.817  INFO 10033 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-29 14:45:27.824  INFO 10033 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 00:38:02.302  INFO 4423 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 00:38:02.307  INFO 4423 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 00:38:02.315  INFO 4423 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 14:34:53.104  INFO 4443 --- [main] c.s.c.ChildActivityTrackingApplication   : Starting ChildActivityTrackingApplication using Java 16.0.1 on sulyvan-N501VW with PID 4443 (/home/sulyvan/WorkEnv/child-activity-tracking/target/classes started by sulyvan in /home/sulyvan/WorkEnv/child-activity-tracking)
+2022-01-30 14:34:53.107  INFO 4443 --- [main] c.s.c.ChildActivityTrackingApplication   : No active profile set, falling back to default profiles: default
+2022-01-30 14:34:54.023  INFO 4443 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 14:34:54.112  INFO 4443 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 6 JPA repository interfaces.
+2022-01-30 14:34:54.916  INFO 4443 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (http)
+2022-01-30 14:34:54.931  INFO 4443 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-30 14:34:54.932  INFO 4443 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 14:34:55.060  INFO 4443 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-30 14:34:55.061  INFO 4443 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1880 ms
+2022-01-30 14:34:55.293  INFO 4443 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 14:34:55.358  INFO 4443 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-30 14:34:55.574  INFO 4443 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 14:34:55.670  INFO 4443 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 14:34:56.149  INFO 4443 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 14:34:56.187  INFO 4443 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 14:34:57.056  INFO 4443 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 14:34:57.069  INFO 4443 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 14:34:58.559  WARN 4443 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 14:34:59.120  INFO 4443 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (http) with context path ''
+2022-01-30 14:34:59.130  INFO 4443 --- [main] c.s.c.ChildActivityTrackingApplication   : Started ChildActivityTrackingApplication in 6.954 seconds (JVM running for 7.724)
+2022-01-30 14:35:20.208  INFO 4443 --- [http-nio-9443-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-30 14:35:20.208  INFO 4443 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-30 14:35:20.211  INFO 4443 --- [http-nio-9443-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-01-30 14:35:20.261  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/sulyvan/toto
+2022-01-30 14:35:20.506  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:35:20.536  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:35:33.927  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:35:33.944  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:36:41.188  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:36:41.231  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:36:42.147  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:36:42.170  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:36:42.207  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:36:42.229  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-30 00:00:00.0
+2022-01-30 14:36:42.259  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-30 00:00:00.0
+2022-01-30 14:36:42.269  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-30 00:00:00.0
+2022-01-30 14:36:42.278  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-30 00:00:00.0
+2022-01-30 14:36:44.686  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:36:44.701  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:36:44.752  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:36:44.765  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 14:36:44.778  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 14:36:44.785  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 14:36:44.795  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 14:38:50.932  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:38:50.950  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:42:15.678  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:42:15.686  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:42:18.254  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:42:18.264  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:42:18.290  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:42:18.299  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-30 00:00:00.0
+2022-01-30 14:42:18.309  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-30 00:00:00.0
+2022-01-30 14:42:18.318  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-30 00:00:00.0
+2022-01-30 14:42:18.327  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-30 00:00:00.0
+2022-01-30 14:42:21.406  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:42:21.417  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:42:21.452  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:42:21.463  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 14:42:21.471  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 14:42:21.478  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 14:42:21.487  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 14:44:06.791  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:44:06.800  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:44:09.680  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:44:09.689  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:44:09.716  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:44:09.726  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-30 00:00:00.0
+2022-01-30 14:44:09.735  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-30 00:00:00.0
+2022-01-30 14:44:09.743  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-30 00:00:00.0
+2022-01-30 14:44:09.751  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-30 00:00:00.0
+2022-01-30 14:44:12.122  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:44:12.132  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:44:12.172  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:44:12.182  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 14:44:12.192  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 14:44:12.200  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 14:44:12.206  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 14:47:43.190  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:47:43.197  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:48:21.826  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:48:21.835  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:48:23.257  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:48:23.265  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:48:23.286  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:48:23.295  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 14:48:23.306  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 14:48:23.313  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 14:48:23.321  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 14:48:36.088  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:48:36.103  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:48:39.076  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:48:39.084  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:48:39.106  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:48:39.115  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-30 00:00:00.0
+2022-01-30 14:48:39.123  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-30 00:00:00.0
+2022-01-30 14:48:39.133  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-30 00:00:00.0
+2022-01-30 14:48:39.142  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-30 00:00:00.0
+2022-01-30 14:48:40.779  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:48:40.799  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:48:40.843  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:48:40.857  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 14:48:40.865  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 14:48:40.872  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 14:48:40.880  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 14:48:51.892  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:48:51.901  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:48:54.904  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:48:54.919  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:48:56.057  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:48:56.065  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:48:56.085  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:48:56.093  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 14:48:56.099  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 14:48:56.107  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 14:48:56.113  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 14:50:03.855  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:50:03.861  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:50:09.315  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:50:09.324  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:50:10.768  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:50:10.775  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:50:10.796  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:50:10.805  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 14:50:10.813  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 14:50:10.821  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 14:50:10.829  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 14:50:48.119  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:50:48.130  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:50:50.798  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:50:50.813  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:50:51.903  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:50:51.911  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:50:51.930  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:50:51.939  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 14:50:51.946  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 14:50:51.953  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 14:50:51.959  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 14:52:18.471  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:52:18.481  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:52:20.251  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:52:20.264  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:52:21.079  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:52:21.088  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:52:21.108  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:52:21.116  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 14:52:21.124  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 14:52:21.130  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 14:52:21.137  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 14:52:34.322  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:52:34.336  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:52:34.394  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:52:34.406  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-24 00:00:00.0
+2022-01-30 14:52:34.469  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-24 00:00:00.0
+2022-01-30 14:52:34.476  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-24 00:00:00.0
+2022-01-30 14:52:34.483  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-24 00:00:00.0
+2022-01-30 14:58:03.882  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:58:03.888  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:58:09.896  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:58:09.907  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:58:17.899  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:58:17.904  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:58:27.420  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:58:27.432  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:58:28.496  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:58:28.504  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:58:28.526  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:58:28.533  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 14:58:28.541  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 14:58:28.547  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 14:58:28.554  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 14:59:06.725  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:59:06.737  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:59:10.071  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:59:10.079  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:59:11.404  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 14:59:11.417  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 14:59:11.442  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 14:59:11.450  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 14:59:11.457  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 14:59:11.463  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 14:59:11.470  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 15:01:08.812  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:01:08.820  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:02:23.851  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:02:23.860  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:02:32.399  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:02:32.406  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:05:52.919  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/sulyvan/toto
+2022-01-30 15:05:53.027  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:05:53.038  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:05:55.333  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:05:55.354  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:06:20.243  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:06:20.251  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:06:23.342  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:06:23.355  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:06:26.078  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:06:26.087  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:06:26.105  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 15:06:26.113  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 15:06:26.120  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 15:06:26.126  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 15:06:26.132  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 15:06:34.422  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:06:34.437  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:07:11.346  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:07:11.359  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:07:26.392  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:07:26.411  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:07:58.061  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:07:58.075  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:08:01.166  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:08:01.178  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:08:04.060  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:08:04.077  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:08:05.169  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:08:05.178  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:08:05.198  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 15:08:05.205  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 15:08:05.212  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 15:08:05.218  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 15:08:05.225  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 15:08:24.212  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:08:24.224  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:08:29.499  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:08:29.506  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:08:38.947  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:08:38.956  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:08:48.109  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:08:48.117  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:09:06.395  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:09:06.410  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:09:07.433  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:09:07.441  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:09:07.463  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 15:09:07.470  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 15:09:07.476  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 15:09:07.482  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 15:09:07.488  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 15:10:27.153  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:10:27.169  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:10:42.736  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:10:42.743  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:10:55.550  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:10:55.583  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:11:01.196  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:11:01.207  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:11:14.194  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:11:14.203  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:11:15.420  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:11:15.432  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:11:19.398  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:11:19.413  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:11:20.832  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:11:20.866  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:11:20.899  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 15:11:20.906  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 15:11:20.915  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 15:11:20.921  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 15:11:20.928  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 15:12:53.166  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:12:53.187  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:13:02.182  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:13:02.200  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:13:21.982  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/sulyvan/toto
+2022-01-30 15:13:22.074  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:13:22.086  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:13:46.843  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/sulyvan/toto
+2022-01-30 15:13:46.922  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:13:46.935  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:14:37.090  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.UserController         : Controller - GET - /user/login/password/sulyvan/toto
+2022-01-30 15:14:37.185  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:14:37.197  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:14:38.857  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:14:38.873  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:14:46.640  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:14:46.653  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:14:49.107  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:14:49.116  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:14:49.141  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 15:14:49.149  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 15:14:49.155  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 15:14:49.161  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 15:14:49.168  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 15:16:52.272  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:16:52.283  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:16:59.101  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:16:59.113  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:16:59.471  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:16:59.482  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:17:03.275  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:17:03.288  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:17:04.413  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:17:04.419  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:17:04.439  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 15:17:04.447  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 15:17:04.452  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 15:17:04.459  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 15:17:04.465  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 15:19:33.576  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:19:33.584  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:19:33.624  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 15:19:33.631  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-18 00:00:00.0
+2022-01-30 15:19:33.695  INFO 4443 --- [http-nio-9443-exec-7] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-18 00:00:00.0
+2022-01-30 15:19:33.702  INFO 4443 --- [http-nio-9443-exec-8] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-18 00:00:00.0
+2022-01-30 15:19:33.710  INFO 4443 --- [http-nio-9443-exec-9] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-18 00:00:00.0
+2022-01-30 15:19:36.804  INFO 4443 --- [http-nio-9443-exec-10] c.s.c.controllers.ParentController       : Controller - GET - /parent/userid1
+2022-01-30 15:19:36.814  INFO 4443 --- [http-nio-9443-exec-1] c.s.c.controllers.ChildController        : Controller - GET - /child/parentsid/1/2
+2022-01-30 15:19:36.845  INFO 4443 --- [http-nio-9443-exec-2] c.s.c.controllers.ActivityController     : Controller - GET - /activity
+2022-01-30 15:19:36.854  INFO 4443 --- [http-nio-9443-exec-3] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/1/2022-01-17 00:00:00.0
+2022-01-30 15:19:36.860  INFO 4443 --- [http-nio-9443-exec-4] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/2/2022-01-17 00:00:00.0
+2022-01-30 15:19:36.866  INFO 4443 --- [http-nio-9443-exec-5] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/3/2022-01-17 00:00:00.0
+2022-01-30 15:19:36.872  INFO 4443 --- [http-nio-9443-exec-6] c.s.c.c.ActivityTrackingController       : Controller - GET - /activitytracking/childid/activityid/date/5/4/2022-01-17 00:00:00.0
+2022-01-30 15:22:02.511  INFO 4443 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 15:22:02.514  INFO 4443 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 15:22:02.518  INFO 4443 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
